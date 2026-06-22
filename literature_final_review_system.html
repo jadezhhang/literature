@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literature Final Review System｜文学导论期末复习体系</title>
+  <style>
+    :root{
+      --bg:#f4f1ea;--panel:#fffdf8;--panel2:#f8f4eb;--text:#2a2926;--muted:#6f6a61;
+      --line:#ded7ca;--accent:#8e3b46;--accent2:#245b62;--gold:#a66a19;--shadow:0 10px 30px rgba(56,45,31,.08);
+      --high-bg:#fff0d0;--mix-bg:#eef0ff;--work-bg:#e8f5ef;--question-bg:#fcebee;--answer-bg:#eaf3fb;
+    }
+    body.dark{
+      --bg:#171816;--panel:#22231f;--panel2:#292a25;--text:#eeeae1;--muted:#aaa69e;
+      --line:#44453e;--accent:#ed9aa5;--accent2:#80c5cb;--gold:#edbd72;--shadow:none;
+      --high-bg:#3b3220;--mix-bg:#292b46;--work-bg:#20362e;--question-bg:#3a252b;--answer-bg:#20323f;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:84px}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.72 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif}
+    a{color:inherit}.layout{display:grid;grid-template-columns:292px minmax(0,1fr);min-height:100vh}
+    aside{position:fixed;inset:0 auto 0 0;width:292px;background:var(--panel);border-right:1px solid var(--line);padding:22px 18px;overflow:auto;z-index:20}
+    .brand{padding:4px 8px 18px;border-bottom:1px solid var(--line);margin-bottom:15px}
+    .brand b{display:block;color:var(--accent);font-family:Georgia,serif;font-size:20px;line-height:1.25}
+    .brand small{color:var(--muted)}.toc a{display:block;text-decoration:none;padding:7px 10px;border-radius:8px;color:var(--muted);font-size:14px}
+    .toc a:hover,.toc a.active{background:var(--panel2);color:var(--accent);font-weight:700}.toc .sub{padding-left:22px;font-size:13px}
+    main{grid-column:2;padding:32px 5vw 90px;max-width:1280px;width:100%;margin:auto}
+    .toolbar{position:sticky;top:0;z-index:15;display:flex;gap:10px;align-items:center;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);padding:10px 0 14px}
+    .search-wrap{display:flex;flex:1;gap:8px}.search-wrap input{flex:1;min-width:0;padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text);outline:none}
+    button{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--panel);color:var(--text);cursor:pointer}button:hover{border-color:var(--accent);color:var(--accent)}
+    .hero{background:linear-gradient(135deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:22px;padding:36px;box-shadow:var(--shadow);margin:5px 0 28px}
+    .hero h1{font:700 clamp(31px,5vw,58px)/1.06 Georgia,"Times New Roman",serif;margin:0;color:var(--accent)}
+    .hero p{max-width:850px;color:var(--muted);font-size:18px}.meta{display:flex;flex-wrap:wrap;gap:8px}.pill,.tag{display:inline-block;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700}
+    .pill{background:var(--panel);border:1px solid var(--line)}.tag.high{background:var(--high-bg);color:var(--gold)}.tag.mix{background:var(--mix-bg);color:#6266b5}
+    .tag.work{background:var(--work-bg);color:var(--accent2)}.tag.question{background:var(--question-bg);color:var(--accent)}.tag.answer{background:var(--answer-bg);color:#316985}
+    section{margin:46px 0}h2{font:700 33px/1.2 Georgia,"Songti SC",serif;color:var(--accent);border-bottom:2px solid var(--line);padding-bottom:10px}
+    h3{margin:30px 0 12px;color:var(--accent2);font-size:22px}h4{margin:19px 0 7px}p{margin:8px 0}ul,ol{margin:8px 0;padding-left:22px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}
+    .card h3,.card h4{margin-top:0}.callout{border-left:5px solid var(--accent);background:var(--panel);padding:14px 16px;border-radius:0 12px 12px 0;margin:14px 0}
+    .callout.high{background:var(--high-bg);border-color:var(--gold)}.callout.mix{background:var(--mix-bg);border-color:#7778bf}.callout.answer{background:var(--answer-bg);border-color:#4f8fac}
+    .callout.warn{background:var(--question-bg);border-color:var(--accent)}.compact li{margin:3px 0}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px;background:var(--panel);margin:12px 0 20px}table{width:100%;border-collapse:collapse;min-width:720px}
+    th,td{padding:11px 13px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top;text-align:left}th{background:var(--panel2);color:var(--accent2);position:sticky;top:0}
+    tr:last-child td{border-bottom:0}td:last-child,th:last-child{border-right:0}.term{font-weight:800;color:var(--accent)}.en{font-family:Georgia,"Times New Roman",serif}
+    details{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin:12px 0;box-shadow:var(--shadow)}summary{cursor:pointer;padding:15px 18px;font-weight:800;color:var(--accent2)}
+    details>div{padding:0 18px 18px}.work-title{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.work-title h3{margin-bottom:4px}
+    .work-grid{display:grid;grid-template-columns:160px 1fr;gap:8px 16px}.work-grid dt{font-weight:800;color:var(--accent2)}.work-grid dd{margin:0 0 7px}
+    .quote{font-family:Georgia,"Times New Roman",serif;background:var(--answer-bg);border-radius:10px;padding:12px 15px;margin:8px 0;color:var(--text)}
+    .placeholder{border:2px dashed var(--gold);background:var(--high-bg);padding:18px;border-radius:13px;text-align:center;margin:16px 0;font-weight:700}.caption{display:block;color:var(--muted);font-weight:400;font-size:13px;margin-top:6px}
+    .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:15px 0}.flow span{background:var(--panel2);border:1px solid var(--line);padding:8px 12px;border-radius:10px;font-weight:700}.flow i{color:var(--accent);font-style:normal}
+    mark.search-hit{background:#ffdf4d;color:#211b00;border-radius:3px;padding:0 1px}.source{color:var(--muted);font-size:12px}.conflict{border:1px solid var(--accent);background:var(--question-bg);padding:12px;border-radius:11px}
+    #backTop{position:fixed;right:22px;bottom:22px;display:none;z-index:30;border-color:var(--accent);font-weight:800}
+    .mobile-menu{display:none}.two-col{columns:2;column-gap:28px}.no-break{break-inside:avoid}
+    @media(max-width:900px){.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}}
+    @media print{aside,.toolbar,#backTop{display:none!important}.layout{display:block}main{padding:0;max-width:none}.card,details{box-shadow:none;break-inside:avoid}details>div{display:block!important}}
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside id="sidebar">
+    <div class="brand"><b>Literature Final Review</b><small>严格依据指定课件与复习资料</small></div>
+    <nav class="toc" id="toc">
+      <a href="#exam">Exam Overview 题型与策略</a>
+      <a href="#poetry">Poetry 诗歌</a>
+      <a href="#novel">Novel 小说</a>
+      <a href="#drama">Drama 戏剧</a>
+      <a href="#feminist">Feminist Criticism</a>
+      <a href="#terms">Key Literary Terms</a>
+      <a href="#comparison">Comparison Questions</a>
+      <a href="#works">Key Works 重点作品</a>
+      <a class="sub" href="#london">— “London”</a>
+      <a class="sub" href="#sonnet130">— “Sonnet 130”</a>
+      <a class="sub" href="#train">— “I like to see…”</a>
+      <a class="sub" href="#cloister">— “Spanish Cloister”</a>
+      <a class="sub" href="#trifles">— Trifles</a>
+      <a class="sub" href="#egg">— The Egg</a>
+      <a class="sub" href="#midsummer">— A Midsummer Night’s Dream</a>
+      <a href="#shortanswer">Short-answer Templates</a>
+      <a href="#essay">Analytical Essay Templates</a>
+      <a href="#conflicts">材料冲突与使用说明</a>
+    </nav>
+  </aside>
+
+  <main id="mainContent">
+    <div class="toolbar">
+      <button class="mobile-menu" id="menuBtn" aria-label="目录">☰</button>
+      <div class="search-wrap">
+        <input id="searchInput" placeholder="搜索术语、作品、作者、考点（如 gender / imagery / Trifles）" autocomplete="off">
+        <button id="searchBtn">搜索</button><button id="clearBtn">清除</button>
+      </div>
+      <button id="themeBtn" aria-label="切换深色模式">🌙</button>
+    </div>
+
+    <header class="hero">
+      <h1>Literature<br>Final Review System</h1>
+      <p>文学导论期末备考知识体系：以老师课件为主干，以题型说明、期末重点、单选/判断、文学评述资料作交叉标注。所有事实与分析均来自本地指定文件。</p>
+      <div class="meta">
+        <span class="pill">4 PPTX · 151 slides</span><span class="pill">7 DOCX</span><span class="pill">3 PDF · 49 pages</span>
+        <span class="tag high">高频考点</span><span class="tag mix">易混淆</span><span class="tag work">作品赏析</span><span class="tag answer">英文答题句</span>
+      </div>
+    </header>
+
+    <section id="exam">
+      <h2>Exam Overview｜题型与复习策略</h2>
+      <div class="grid">
+        <article class="card"><h3>Choose the best answer</h3><p><b>30%</b>｜15题，每题2分</p><p>重点：定义识别、韵式、叙述视角、人物类型、戏剧类型、作品细节。</p></article>
+        <article class="card"><h3>True / False</h3><p><b>30%</b>｜20题，每题1.5分</p><p>重点：绝对化表述、概念偷换、作品形式与主题、术语定义反向判断。</p></article>
+        <article class="card"><h3>Short-answer</h3><p><b>10%</b>｜2题</p><p><span class="tag high">连续真题线索</span> sex vs gender；two ways of characterization。</p></article>
+        <article class="card"><h3>Comprehensive essay</h3><p><b>30%</b>｜两段选一段</p><p>诗歌与文本选段二选一；必须形成连贯短论文，不能只列要点。</p></article>
+      </div>
+      <div class="callout high"><b>最高优先级：</b>题型说明记载，sex vs gender 与 characterization 已在往年简答中出现；“重点内容2.0”又注明 2024 年重复考察。复习时应能直接用英文定义、对比并举文学分析用途。</div>
+      <h3>大题范围与优先级</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>层级</th><th>作品</th><th>材料依据</th><th>备考动作</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag high">A 级</span></td><td>“London”; “Sonnet 130”; “I like to see it lap the Miles”; “Soliloquy of the Spanish Cloister”; <i>Trifles</i>; <i>The Egg</i></td><td>题型说明明确列为分析题范围；课件有专门分析</td><td>背“形式—语言—意象/象征—主题—语气—效果”的完整论证链。</td></tr>
+          <tr><td><span class="tag question">低优先</span></td><td><i>A Midsummer Night’s Dream</i></td><td>题型说明写明“因为已经写过论文，所以不重复考察”</td><td>保留基本识别点，不投入与六篇核心作品同等时间。</td></tr>
+        </tbody>
+      </table></div>
+      <h3>材料使用顺序</h3>
+      <div class="flow"><span>老师 PPT 原文</span><i>→</i><span>题型说明 / 期末重点</span><i>→</i><span>复习内容汇总</span><i>→</i><span>文学评述与题库</span></div>
+      <p class="source">理由：复习稿存在少量互相矛盾或明显错写的格律、分节信息；本页以课件为校准基准。</p>
+    </section>
+
+    <section id="poetry">
+      <h2>Poetry｜诗歌</h2>
+      <div class="callout"><b>课件框架：</b>major types: narrative, lyric, dramatic；major elements: voice (speaker and tone), diction, imagery, figures of speech, sound and rhythm。重点为 prosody 与 imagery。</div>
+      <h3>1. Poetry 与 Prosody</h3>
+      <p><span class="term">Poetry</span>：composition in verse or metrical language, or an equivalent patterned arrangement of language；通常包含更精心选择的词语、比喻用法和一定的形式秩序。</p>
+      <div class="flow"><span>Syllable 音节</span><i>→</i><span>Foot 音步</span><i>→</i><span>Meter 格律</span><i>→</i><span>Rhythm 节奏</span></div>
+      <div class="placeholder">【建议插入截图：Introduction + Poetry（shared）.pptx · slide 36 · “Rhythm ← Meter ← Foot ← Syllable”层级图与音步扫描示例】<span class="caption">当前环境可提取课件文字与内嵌图片，但无法可靠渲染整张 PPT 幻灯片；知识点已在上方重构。</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>术语</th><th>中文</th><th>英文定义 / 结构</th><th>识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Foot</td><td>音步</td><td>The basic unit in the description of the underlying rhythm of a poem.</td><td>由音节的重读/非重读类型与数量界定。</td></tr>
+          <tr><td class="term">Iamb</td><td>抑扬格</td><td>unstressed + stressed (× /)</td><td>today, compare；常与 pentameter 组合。</td></tr>
+          <tr><td class="term">Trochee</td><td>扬抑格</td><td>stressed + unstressed (/ ×)</td><td>English, college；Browning 重点诗大体采用 trochaic tetrameter。</td></tr>
+          <tr><td class="term">Dactyl</td><td>扬抑抑格</td><td>stressed + two unstressed</td><td>actually, negative。</td></tr>
+          <tr><td class="term">Anapaest</td><td>抑抑扬格</td><td>two unstressed + stressed</td><td>interrupt, understand。</td></tr>
+          <tr><td class="term">Meter</td><td>格律</td><td>the recurring pattern of stress and pause; described by the type and number of the predominating foot</td><td>先说 foot 类型，再说每行 foot 数量。</td></tr>
+          <tr><td class="term">Iambic pentameter</td><td>抑扬格五音步</td><td>five predominantly iambic feet per line</td><td>Shakespearean sonnet 高频。</td></tr>
+          <tr><td class="term">Metric variation</td><td>格律变异</td><td>deviation from the expected metrical pattern</td><td>用于强调，或避免机械单调；包括 inversion、headless verse、catalexis。</td></tr>
+        </tbody>
+      </table></div>
+      <h3>2. Rhyme 与 Sound</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>术语</th><th>英文解释</th><th>课件例子</th><th>判断陷阱</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Full / perfect rhyme</td><td>stressed vowel and following sounds match</td><td>fish/dish; why/sigh</td><td>不只是元音相同。</td></tr>
+          <tr><td class="term">Assonance</td><td>matching / repetition of vowel sounds</td><td>shake/hate; time/mind</td><td>与 consonance 相反。</td></tr>
+          <tr><td class="term">Alliteration</td><td>repetition of initial consonant sounds; head rhyme</td><td>safe and sound</td><td>关键词 initial / beginning。</td></tr>
+          <tr><td class="term">Consonance</td><td>matching / repetition of consonant sounds</td><td>fish/dash; cold/bald</td><td>不是 vowel sounds。</td></tr>
+          <tr><td class="term">Para-rhyme</td><td>consonants match while stressed vowel differs</td><td>block/black; reader/rider</td><td>属于 consonant rhymes。</td></tr>
+          <tr><td class="term">Eye rhyme</td><td>similar spelling but different pronunciation</td><td>blood/hood; daughter/laughter</td><td>“appeals to the eye”。</td></tr>
+          <tr><td class="term">Masculine rhyme</td><td>ends on a stressed syllable</td><td>smile/file</td><td>勿按“男性主题”理解。</td></tr>
+          <tr><td class="term">Feminine rhyme</td><td>ends with an unstressed syllable</td><td>smiling/filing</td><td>通常多音节。</td></tr>
+        </tbody>
+      </table></div>
+      <h3>3. Stanza / Rhyme Scheme / Verse Form</h3>
+      <div class="grid">
+        <div class="card"><h4>Stanza names</h4><p>2 couplet；3 tercet/triplet；4 quatrain；5 quintain/cinquain；6 sextain；7 septet；8 octave；9 Spenserian stanza；14 sonnet。</p></div>
+        <div class="card"><h4>High-frequency schemes</h4><p>Heroic couplet: aa bb cc…；Ballad: abcb / abab；Terza rima: aba bcb cdc；Spenserian stanza: ababbcbcc。</p></div>
+        <div class="card"><h4>Sonnets</h4><p>Shakespearean: <b>abab cdcd efef gg</b>；Petrarchan: octave + sestet，课件示例 abbaabba cdccdc；Spenserian: abab bcbc cdcd ee。</p></div>
+      </div>
+      <h3>4. Imagery, Diction, Voice</h3>
+      <div class="grid">
+        <article class="card"><h4>Imagery 意象</h4><p>Representation through language of sense experience: sight, sound, smell, taste, touch, internal sensation, motion.</p><p><b>识别：</b>不是“提供信息”，而是“show experience”；具体、可感、能引起联想。</p></article>
+        <article class="card"><h4>Diction 措辞</h4><p>关注 sound、denotation、connotation。诗歌语言倾向 short and concise、concrete、suggestive、multidimensional，并追求 novelty / defamiliarization。</p></article>
+        <article class="card"><h4>Speaker 说话者</h4><p>poet ≠ speaker。Reliable speaker 的态度大体代表诗人；unreliable speaker 的态度与诗人不同，戏剧独白中常见。</p></article>
+        <article class="card"><h4>Tone 语气</h4><p>作品态度的 emotional coloring；由 meter/rhyme、word choice、syntax、figures、imagery 共同产生。</p></article>
+      </div>
+      <h3>5. Classification</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>类型</th><th>课件定义</th><th>代表作/识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Epic</td><td>lengthy narrative poem in elevated, ceremonious style about heroic deeds significant to a culture or nation</td><td><i>Iliad</i>, <i>Odyssey</i>, <i>Beowulf</i>；hero，不是 knight。</td></tr>
+          <tr><td class="term">Ballad</td><td>folk song or orally transmitted poem telling a popular story in a simple dramatic way</td><td>Robin Hood ballads；常见四行诗节。</td></tr>
+          <tr><td class="term">Romance</td><td>medieval narrative poem about knightly adventure</td><td><i>Sir Gawain and the Green Knight</i>；此处不是“浪漫爱情”。</td></tr>
+          <tr><td class="term">Ode</td><td>lofty lyric addressing/praising a person, thing, event or nature</td><td><i>Ode to the West Wind</i>。</td></tr>
+          <tr><td class="term">Elegy</td><td>lyric lamenting a dead friend or public figure</td><td>核心是 lament，不只是 praise。</td></tr>
+          <tr><td class="term">Dramatic monologue</td><td>a single persona speaks to an implied auditor and is overheard by the reader</td><td>无作者评论；speaker 在辩解中不自觉暴露性格。</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="novel">
+      <h2>Novel｜小说</h2>
+      <div class="callout"><b>Novel：</b>an extended prose narrative about largely fictional, if usually realistic, characters and plausible events.</div>
+      <h3>1. Rise and development</h3>
+      <ul class="compact">
+        <li>18th century：一般被视为 English novel 的诞生期。</li>
+        <li>条件：Enlightenment 对 reason / actuality 的重视；印刷技术与市场发展；城市人口识字率提高。</li>
+        <li>早期代表：Defoe, <i>Robinson Crusoe</i> (1719), <i>Moll Flanders</i> (1722)；Swift, <i>Gulliver’s Travels</i> (1726)。</li>
+        <li>复习内容 PDF 另列：欧洲第一部小说 <i>Don Quixote</i> (1605)；英国第一部小说 <i>Robinson Crusoe</i> (1719)。</li>
+      </ul>
+      <h3>2. Elements of Novel</h3>
+      <div class="flow"><span>Plot</span><span>Characterization</span><span>Theme</span><span>Style</span><span>Point of View</span><span>Setting</span></div>
+      <p><b>Most technical aspect：</b>POV / narrative point of view。</p>
+      <h3>3. Narrator & Point of View</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>类型</th><th>英文定义</th><th>识别点</th><th>课件例子</th></tr></thead>
+        <tbody>
+          <tr><td class="term">First-person narrator</td><td>narrator as a participant</td><td>I / me / we；可为 protagonist 或 non-protagonist observer</td><td>Gulliver；Dr. Watson；Nick Carraway</td></tr>
+          <tr><td class="term">Third-person omniscient</td><td>narrator can enter the minds of more than one character</td><td>zero focalization；narrator &gt; character</td><td><i>Tess of the D’Urbervilles</i></td></tr>
+          <tr><td class="term">Third-person limited</td><td>narrator is limited to one character’s thoughts and feelings</td><td>interior focalization；narrator = character</td><td><i>To the Lighthouse</i></td></tr>
+          <tr><td class="term">Third-person objective</td><td>reveals no thoughts or feelings; only dialogue and action</td><td>exterior focalization；camera-lens effect</td><td>“Hills Like White Elephants”</td></tr>
+        </tbody>
+      </table></div>
+      <div class="placeholder">【建议插入截图：Novel (2026 shared).pptx · slides 12–15 · 三种 third-person narration 的分层说明】<span class="caption">可重点截取 omniscient / limited / objective 三页连续画面，便于考前快速辨认。</span></div>
+      <h3>4. Characterization</h3>
+      <div class="callout high"><b>简答题重点：</b>Two ways of characterization = direct characterization + indirect characterization。</div>
+      <ul>
+        <li><b>Direct characterization：</b>the narrator/author directly tells or comments on a character’s appearance or personality；常以外貌、名称、直接说明呈现。</li>
+        <li><b>Indirect characterization：</b>the author steps aside and lets characters reveal themselves through dialogue, action, behavior, feeling and others’ reactions；reader infers the trait。</li>
+      </ul>
+      <h3>5. Style</h3>
+      <p><b>Style = the verbal identity of the work</b>，即 how to write。观察 diction、syntax、figures of speech、irony、symbol 与 narrative tone。</p>
+    </section>
+
+    <section id="drama">
+      <h2>Drama｜戏剧</h2>
+      <p>Drama 同时是 <b>literary art</b> 与 <b>performing art</b>；西方戏剧传统源于 ancient Greece，Greek tragedy 源于向 Dionysus 致敬的 dithyramb。</p>
+      <h3>1. Aristotle’s Six Elements</h3>
+      <div class="flow"><span>Plot</span><i>→</i><span>Character</span><i>→</i><span>Thought</span><i>→</i><span>Diction</span><i>→</i><span>Spectacle</span><i>→</i><span>Music</span></div>
+      <div class="grid">
+        <article class="card"><h4>Plot</h4><p>“the soul of tragedy”；情节结构、冲突与因果。</p></article>
+        <article class="card"><h4>Thought</h4><p>the reasoning aspect；概括 moral 并指向全剧 symbolic meaning。</p></article>
+        <article class="card"><h4>Diction</h4><p>dynamic、clear、oral、interesting but economical、appropriate to character and situation。</p></article>
+        <article class="card"><h4>Spectacle / Music</h4><p>所有视觉方面 / 所有听觉方面；分别营造环境、气氛与 mood。</p></article>
+      </div>
+      <h3>2. Plot Structure</h3>
+      <div class="flow"><span>Exposition</span><i>→</i><span>Point of attack / conflict</span><i>→</i><span>Rising action & complication</span><i>→</i><span>Climax / reversal</span><i>→</i><span>Falling action</span><i>→</i><span>Denouement</span></div>
+      <div class="placeholder">【建议插入截图：Drama（shared）.pptx · slides 4–7 · plot structure、exposition、complication、denouement 连续结构图】</div>
+      <h3>3. Genres of Drama</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>体裁</th><th>核心定义</th><th>考试识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Tragedy</td><td>serious, complete action；arouses pity and fear and accomplishes katharsis</td><td>tragic flaw；人的尊严与伟大；课件强调其最终视野是 positive / optimistic。</td></tr>
+          <tr><td class="term">Comedy</td><td>light, humorous play ending happily</td><td>笑人的 follies, foibles, vices；关注 social man；通常 affirmative。</td></tr>
+          <tr><td class="term">Tragicomedy</td><td>serious action moves toward catastrophe, then reverses and ends happily</td><td>traditional: serious action + happy ending；modern: neither simply tragic nor comic。</td></tr>
+          <tr><td class="term">Melodrama</td><td>sensational, exaggerated, emotion-driven suspense</td><td>give a thrill；善恶极端，正义在快乐结局中获胜。</td></tr>
+          <tr><td class="term">Farce</td><td>highly exaggerated, extravagant, improbable comedy</td><td>give a laugh；physical humor / absurdity / one-dimensional characters。</td></tr>
+          <tr><td class="term">Problem play</td><td>realistic drama of social criticism developed in the 19th century</td><td>角色辩论冲突立场；expose social ills；stimulate discussion。</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="feminist">
+      <h2>Feminist Criticism｜女性主义批评</h2>
+      <div class="callout"><b>Definition：</b>examines how literature and other cultural productions reinforce or undermine the oppression of women.</div>
+      <h3>1. Three Waves</h3>
+      <div class="grid">
+        <div class="card"><h4>First wave (1848–1920)</h4><p>abolitionism and women’s suffrage；1920–1960 有 setback。</p></div>
+        <div class="card"><h4>Second wave (mid-1960s–1982)</h4><p>pill、abortion、equal pay；揭示 sexual harassment、domestic violence。</p></div>
+        <div class="card"><h4>Third wave (1982–课件所称“now”)</h4><p>关注 black women、lesbians，以及 race / sexual orientation。</p></div>
+      </div>
+      <h3>2. Core Terms</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th>术语</th><th>中文</th><th>课件定义</th><th>作品联结</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Patriarchy</td><td>父权制</td><td>a system/culture privileging men over women by promoting traditional gender roles</td><td><i>Trifles</i> 中男性贬低女性经验。</td></tr>
+          <tr><td class="term">Gender roles</td><td>性别角色</td><td>patriarchy prescribes men as rational/strong/decisive and women as emotional/weak/submissive</td><td><i>Trifles</i>；<i>The Egg</i> 中男性经济成功压力。</td></tr>
+          <tr><td class="term">Biological essentialism</td><td>生物本质主义</td><td>bases social inequality on biological differences and assumes women’s inborn inferiority</td><td>为男性垄断社会权力辩护。</td></tr>
+          <tr><td class="term">Social constructionism</td><td>社会建构主义</td><td>feminine and masculine gender categories are constructed by society</td><td>“One is not born a woman; one becomes one.”</td></tr>
+          <tr><td class="term">The Other</td><td>他者</td><td>woman is objectified and marginalized by difference from male norms</td><td>女性被定义为“缺少男性所拥有之物”。</td></tr>
+          <tr><td class="term">Sisterhood</td><td>姐妹情谊</td><td>psychological and political bonding based on common experiences and goals</td><td><i>Trifles</i> 结尾的女性团结与沉默。</td></tr>
+        </tbody>
+      </table></div>
+      <h3>3. Premises & Practices</h3>
+      <ul>
+        <li>Women are oppressed economically, politically, socially and psychologically by patriarchy and patriarchal ideology.</li>
+        <li>Western institutions and literary canon are deeply rooted in male-oriented thinking.</li>
+        <li>Biology determines sex；culture determines gender；gender concerns socially programmed behavior, not anatomy.</li>
+        <li>Ultimate goal：promote women’s equality and change the world.</li>
+        <li>Practices：gender studies；sex-related writing strategies；Marxist feminism；psychoanalytic feminism；minority feminist criticism。</li>
+      </ul>
+      <p class="source">Sources: Feminist Criticism 2025 slides 1–5；文学导论复习内容 PDF pp.17–19。</p>
+    </section>
+
+    <section id="terms">
+      <h2>Key Literary Terms｜文学术语速查</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>English term</th><th>中文</th><th>English definition / explanation</th><th>考试识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Enjambment</td><td>跨行连续</td><td>a sentence/argument runs beyond the line ending without pause or punctuation</td><td>run-on line；迫使阅读继续到下一行。</td></tr>
+          <tr><td class="term">Caesura</td><td>诗行中停顿</td><td>a pause within a line, often marked by punctuation or syntax</td><td>“Marks of weakness, marks of woe.”</td></tr>
+          <tr><td class="term">Blank verse</td><td>素体诗</td><td>unrhymed iambic pentameter</td><td>有格律、无押韵。</td></tr>
+          <tr><td class="term">Free verse</td><td>自由诗</td><td>verse without regular metrical patterns; may be rhymed or unrhymed</td><td>核心是无固定格律，不等于绝不押韵。</td></tr>
+          <tr><td class="term">Denotation</td><td>字面义</td><td>literal meaning</td><td>与 connotation 对照。</td></tr>
+          <tr><td class="term">Connotation</td><td>隐含/联想义</td><td>overtone depending on association, allusion, implication and context</td><td>诗歌措辞分析核心。</td></tr>
+          <tr><td class="term">Metaphor</td><td>隐喻</td><td>direct comparison without “like” or “as”</td><td>“mind-forg’d manacles”。</td></tr>
+          <tr><td class="term">Simile</td><td>明喻</td><td>comparison using “like” or “as”</td><td>“neigh like Boanerges”。</td></tr>
+          <tr><td class="term">Metonymy</td><td>转喻</td><td>a related object/name stands for the thing meant</td><td>“the pen” = ideas/writing；“the sword” = force。</td></tr>
+          <tr><td class="term">Synecdoche</td><td>提喻</td><td>part stands for whole, or whole for part</td><td>“all hands”。</td></tr>
+          <tr><td class="term">Paradox</td><td>悖论</td><td>an apparent contradiction containing a basis of truth</td><td>seeming opposites can be reconciled。</td></tr>
+          <tr><td class="term">Oxymoron</td><td>矛盾修饰</td><td>contradictory terms placed together</td><td>“Marriage hearse”; “living dead”。</td></tr>
+          <tr><td class="term">Irony</td><td>反讽</td><td>intended meaning contrasts with literal/apparent meaning</td><td><i>Trifles</i> 中“琐事”反而揭示真相。</td></tr>
+          <tr><td class="term">Personification</td><td>拟人</td><td>human/animate traits given to non-human things</td><td>Dickinson 的 train：lap, lick, feed, peer, complain。</td></tr>
+          <tr><td class="term">Symbol</td><td>象征</td><td>an object/image represents meaning beyond the literal</td><td>egg, dead bird, cage, knot。</td></tr>
+          <tr><td class="term">Foreshadowing</td><td>伏笔</td><td>early clues make later action credible and build suspense</td><td>属于 exposition 可承担的功能。</td></tr>
+          <tr><td class="term">Climax</td><td>高潮</td><td>the high point / turning point / reversal</td><td>之后进入 falling action。</td></tr>
+          <tr><td class="term">Denouement</td><td>结局</td><td>resolution after climax where things fall into place</td><td>选择题常对应 resolution。</td></tr>
+          <tr><td class="term">Theme</td><td>主题</td><td>central idea / underlying message</td><td>不等于 subject（作品“写什么”）。</td></tr>
+          <tr><td class="term">Diction</td><td>措辞</td><td>choice and use of words</td><td>formal/colloquial；abstract/concrete；static/dynamic verbs。</td></tr>
+          <tr><td class="term">Style</td><td>风格</td><td>the verbal identity of a work; how it is written</td><td>diction + syntax + figures + irony + symbol + tone。</td></tr>
+          <tr><td class="term">Stream of consciousness</td><td>意识流</td><td>attempts to replicate the flow of thought processes</td><td>Modernism；Joyce / Woolf / Faulkner 在材料中出现。</td></tr>
+          <tr><td class="term">Unreliable narrator/speaker</td><td>不可靠叙述者/说话者</td><td>credibility or attitude differs from the author’s position</td><td>dramatic monologue 常靠其自我暴露形成反讽。</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="comparison">
+      <h2>Comparison Questions｜辨析题</h2>
+      <div class="callout high"><b>答题方法：</b>先指出比较维度，再分别给定义，最后用一句“核心差异”收束。不要只写中文标签。</div>
+      <details open><summary>Sex vs Gender <span class="tag high">连续真题 / 高频</span></summary><div>
+        <div class="table-wrap"><table><tr><th></th><th>Sex</th><th>Gender</th></tr>
+          <tr><td>中文</td><td>生理性别</td><td>社会性别</td></tr>
+          <tr><td>Definition</td><td>biological constitution as female or male, determined by nature</td><td>cultural programming as feminine or masculine, created by society</td></tr>
+          <tr><td>Focus</td><td>anatomy / biological traits</td><td>socially programmed behavior, roles and expectations</td></tr>
+          <tr><td>One-line distinction</td><td colspan="2">Biology determines sex, whereas culture determines gender.</td></tr>
+        </table></div>
+      </div></details>
+      <details><summary>Story vs Plot <span class="tag mix">因果 / 时间</span></summary><div>
+        <p><b>Story：</b>a narrative of events arranged in their time sequence.</p>
+        <p><b>Plot：</b>a narrative of events with emphasis on causality；time sequence remains, but causality overshadows it.</p>
+        <p class="quote">Story: “The king died and then the queen died.”<br>Plot: “The king died and then the queen died of grief.”</p>
+      </div></details>
+      <details><summary>Round vs Flat Character</summary><div>
+        <p><b>Round：</b>well-developed, complex, three-dimensional, rich and convincing；may contain contradictory qualities.</p>
+        <p><b>Flat：</b>underdeveloped, one-dimensional or stereotypical；often describable by one or two traits.</p>
+        <p><b>核心维度：</b>complexity / degree of development。</p>
+      </div></details>
+      <details><summary>Static vs Dynamic Character</summary><div>
+        <p><b>Static：</b>does not undergo significant change.</p><p><b>Dynamic：</b>undergoes significant change or development.</p>
+        <div class="conflict"><b>易错：</b>round/flat 主要看复杂度，static/dynamic 主要看是否变化。材料中常把 round 与 dynamic、flat 与 static 配对描述，但答辨析题时应分清两个判断维度。</div>
+      </div></details>
+      <details><summary>Direct vs Indirect Characterization <span class="tag high">连续真题</span></summary><div>
+        <p><b>Direct：</b>the narrator/author directly states or comments on appearance and personality — telling.</p>
+        <p><b>Indirect：</b>the author lets speech, action, behavior, feeling and others’ reactions reveal personality — showing and inference.</p>
+      </div></details>
+      <details><summary>Protagonist / Antagonist / Foil</summary><div>
+        <p><b>Protagonist：</b>main character involved in the conflict driving the plot；不必然是 moral hero。</p>
+        <p><b>Antagonist：</b>a character or force in conflict with the protagonist；可为 nature / society / fate。</p>
+        <p><b>Foil：</b>through difference or similarity, brings out an aspect of another character。</p>
+      </div></details>
+      <details><summary>Blank Verse vs Free Verse</summary><div>
+        <p><b>Blank verse：</b>unrhymed <u>iambic pentameter</u> — meter without rhyme.</p>
+        <p><b>Free verse：</b>without regular metrical patterns；may be rhymed or unrhymed.</p>
+      </div></details>
+      <details><summary>Alliteration / Assonance / Consonance</summary><div>
+        <p><b>Alliteration：</b>initial consonant repetition；<b>Assonance：</b>vowel sound repetition；<b>Consonance：</b>consonant sound repetition, especially non-initial/end patterns in the course materials.</p>
+      </div></details>
+      <details><summary>Modernism / Modernity / Modernization <span class="tag mix">期末重点标注可能考</span></summary><div>
+        <div class="table-wrap"><table>
+          <tr><th>概念</th><th>材料中的定位</th><th>核心说明</th></tr>
+          <tr><td class="term">Modernism</td><td>art / 文艺观念</td><td>19世纪后半叶出现、20世纪之交兴盛；质疑和批判理性主义，打破传统艺术形式，探索新的现实呈现方式；材料举 Baudelaire 与 Eliot。</td></tr>
+          <tr><td class="term">Modernity</td><td>ideology / 性质</td><td>源于 Enlightenment 的思想架构；追求人的主体性与自主性，是西方资本主义社会的理论根基。</td></tr>
+          <tr><td class="term">Modernization</td><td>institution / 制度与过程</td><td>思想在城市、工业、商业、教育、经济与社会运作方式中的制度化、成型化。</td></tr>
+        </table></div>
+        <p class="quote">Modernism concerns artistic response; modernity concerns the ideological condition; modernization concerns institutional and social transformation.</p>
+      </div></details>
+      <details><summary>Tragedy vs Comedy</summary><div>
+        <p><b>Tragedy：</b>concentrates on man’s destiny and philosophical man；通过 pity/fear 与 katharsis 显示人面对毁灭性力量时的尊严。</p>
+        <p><b>Comedy：</b>lives in commonplace everyday life and focuses on social man；揭示 follies, foibles and vices，通常以肯定性和快乐结局收束。</p>
+      </div></details>
+      <details><summary>Dramatic Monologue vs Soliloquy</summary><div>
+        <p><b>Dramatic monologue：</b>single persona addresses an implied/silent auditor；auditor 通过说话线索被感知。</p>
+        <p><b>Soliloquy：</b>speaker talks to himself without an explicit listener；<i>Soliloquy of the Spanish Cloister</i> 是 self-addressed interior commentary，但共享 dramatic monologue 的自我暴露与心理刻画特征。</p>
+      </div></details>
+    </section>
+
+    <section id="works">
+      <h2>Key Works｜重点作品</h2>
+
+      <article id="london">
+        <div class="work-title"><h3>William Blake, “London” (1794)</h3><span class="tag work">赏析题重点</span><span class="tag high">题库高频</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>lyric poem；四个 quatrains。</dd>
+          <dt>Theme</dt><dd>urban suffering and misery；oppression and control；loss of innocence；institutional corruption；psychological oppression。</dd>
+          <dt>Form / Structure</dt><dd>four stanzas × four lines；ABAB throughout；主要为 iambic tetrameter，但存在 metric variation。第一节偏视觉，后三节更聚焦声音；第三节行首形成 “HEAR” 的 acrostic（评述资料强调）。</dd>
+          <dt>Diction</dt><dd>“charter’d” 暗示 mapped, regulated, controlled；“every”反复扩大苦难的普遍性；大量负面词汇制造 inescapable misery。</dd>
+          <dt>Imagery</dt><dd>marks of weakness/woe；cries；chimney-sweeper；black’ning Church；soldier’s blood；harlot’s curse；new-born infant；Marriage hearse。</dd>
+          <dt>Figures</dt><dd>repetition；metaphor (“mind-forg’d manacles”)；oxymoron (“Marriage hearse”)；enjambment；caesura；alliteration；symbolism。</dd>
+          <dt>Speaker / Tone</dt><dd>a disillusioned observer walking through London；gloomy, critical, indignant, despairing。</dd>
+          <dt>Exam angles</dt><dd>“charter’d”的含义；sight → sound；institutional targets；imagery 如何共同表现 oppression；regular form 与 chaotic misery 的张力。</dd>
+        </dl>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">Through the repeated word “every,” Blake presents suffering as universal rather than accidental.</p>
+          <p class="quote">The metaphor “mind-forg’d manacles” suggests that oppression has been internalized as a psychological form of imprisonment.</p>
+          <p class="quote">The regular ABAB rhyme scheme contrasts with the misery described, making urban suffering appear repetitive and inescapable.</p>
+        </div>
+      </article>
+
+      <article id="sonnet130">
+        <div class="work-title"><h3>William Shakespeare, “Sonnet 130”</h3><span class="tag work">赏析题重点</span><span class="tag high">题库高频</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>Shakespearean sonnet。</dd>
+          <dt>Theme</dt><dd>realistic and authentic love；critique of artificial, hyperbolic praise；love values reality rather than superficial ideals。</dd>
+          <dt>Form / Structure</dt><dd>three quatrains + final rhyming couplet；ABAB CDCD EFEF GG；iambic pentameter。前三组比较拆解理想化惯例，末尾 couplet 完成意义转折与确认。</dd>
+          <dt>Diction</dt><dd>simple, direct, deliberately unornamented；多用 negation (“nothing like,” “no such,” “never”)。</dd>
+          <dt>Imagery</dt><dd>visual: sun, coral, snow, black wires, roses；olfactory: perfumes/breath；aural: speech/music；kinesthetic: goddess walking / mistress treading on ground。</dd>
+          <dt>Figures</dt><dd>irony, parody, anti-hyperbole / subverted comparisons, negation, contrast。</dd>
+          <dt>Speaker / Tone</dt><dd>realistic, witty, ironic toward false poetic convention, yet affectionate toward the mistress。</dd>
+          <dt>Exam angles</dt><dd>anti-Petrarchan strategy；final couplet；real beauty vs false compare；不同感官意象；形式传统与内容反传统的结合。</dd>
+        </dl>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">The speaker rejects conventional comparisons not to insult his mistress, but to expose the artificiality of exaggerated love poetry.</p>
+          <p class="quote">The final couplet reveals that sincere love does not depend on false comparison or idealized physical beauty.</p>
+          <p class="quote">The formal regularity of the Shakespearean sonnet frames a deliberately unconventional and realistic praise of love.</p>
+        </div>
+      </article>
+
+      <article id="train">
+        <div class="work-title"><h3>Emily Dickinson, “I like to see it lap the Miles”</h3><span class="tag work">赏析题重点</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>riddle-like lyric describing a train without naming it。</dd>
+          <dt>Theme</dt><dd>industrialization, technological power, human ingenuity；nature and machine；admiration mixed with awareness of force and intrusion。</dd>
+          <dt>Form / Structure</dt><dd>课件正文为17行并大量使用 dash；复习资料对具体 stanza 数有冲突，考试更稳妥地抓 irregular/half-rhyme、enjambment、动作推进与最后 stop。</dd>
+          <dt>Diction</dt><dd>dynamic verbs: lap, lick, feed, step, peer, pare, crawl, chase, neigh, stop；“prodigious,” “supercilious,” “horrid,” “docile and omnipotent”塑造兼具强大与驯服的形象。</dd>
+          <dt>Imagery</dt><dd>train as a large animal/horse；valleys, mountains, shanties, quarry, hill, stable door；aural imagery in “complaining,” “hooting,” “neigh”。</dd>
+          <dt>Figures</dt><dd>extended personification / animal metaphor；simile (“neigh like Boanerges”)；anaphora (“And” / “Then”)；alliteration；enjambment；capitalization and dashes。</dd>
+          <dt>Speaker / Tone</dt><dd>observing voice with wonder, fascination and respect for industrial power；diction also carries hints of arrogance and menace。</dd>
+          <dt>Exam angles</dt><dd>如何从 verbs 判断“it”是 train；personification；sound imagery；“docile and omnipotent”并置；运动节奏与工业力量。</dd>
+        </dl>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">Dickinson never names the train; instead, a chain of animated verbs turns the machine into a powerful living creature.</p>
+          <p class="quote">The phrase “docile and omnipotent” captures the paradoxical image of a machine that is both controllable and immensely powerful.</p>
+          <p class="quote">The repeated conjunctions and enjambment reproduce the train’s continuous movement through the landscape.</p>
+        </div>
+      </article>
+
+      <article id="cloister">
+        <div class="work-title"><h3>Robert Browning, “Soliloquy of the Spanish Cloister”</h3><span class="tag work">赏析题重点</span><span class="tag high">Speaker / Tone 高频</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>dramatic soliloquy；与 dramatic monologue 共享人物自我暴露与心理刻画。</dd>
+          <dt>Theme</dt><dd>moral hypocrisy, jealousy, hatred, religious corruption / immorality；speaker 把自己的罪恶投射给 Brother Lawrence。</dd>
+          <dt>Form / Structure</dt><dd>nine eight-line stanzas；ABABCDCD；roughly trochaic tetrameter with irregularities。</dd>
+          <dt>Diction</dt><dd>spoken language；nonverbal growl “Gr-r-r”；colloquial curses；Latin religious expressions；coarse, violent, sarcastic vocabulary。</dd>
+          <dt>Imagery</dt><dd>flowers, food, tableware, convent figures, damnation, Satan；日常细节被 speaker 的仇恨扭曲。</dd>
+          <dt>Figures</dt><dd>dramatic irony；self-revelation；allusion；alliteration；caesura；contrast / juxtaposition。</dd>
+          <dt>Speaker / Tone</dt><dd>a jealous, hateful, hypocritical monk speaking to himself；sarcastic, contemptuous, bitter, malevolent。</dd>
+          <dt>Exam angles</dt><dd>who speaks / tone / listener / comparison with Brother Lawrence；unreliable speaker；表面虔诚与内在罪恶；规则形式与混乱心理。</dd>
+        </dl>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">The speaker condemns Brother Lawrence, yet his violent language exposes his own jealousy and moral corruption.</p>
+          <p class="quote">Dramatic irony arises because the monk’s accusations reveal more about himself than about the man he hates.</p>
+          <p class="quote">The regular stanza and rhyme pattern sharply contrast with the speaker’s uncontrolled and sinful thoughts.</p>
+        </div>
+      </article>
+
+      <article id="trifles">
+        <div class="work-title"><h3>Susan Glaspell, <i>Trifles</i> (1916)</h3><span class="tag work">文本赏析重点</span><span class="tag high">女性主义联结</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>one-act play；murder mystery；early feminist drama。</dd>
+          <dt>Theme</dt><dd>gender relationships and power struggle；women’s oppression；male blindness；female awakening and solidarity；law versus empathetic justice。</dd>
+          <dt>Form / Structure</dt><dd>crime investigation with exposition / complication / denouement；men’s official investigation and women’s informal reconstruction form two contrasting modes。</dd>
+          <dt>Setting</dt><dd>a bleak, untidy, cold kitchen in an abandoned rural farmhouse；domestic space becomes the real site of knowledge。</dd>
+          <dt>Diction / Dialogue</dt><dd>men’s dismissive and patronizing language contrasts with women’s reflective, collaborative dialogue；speech reveals gender power。</dd>
+          <dt>Symbols</dt><dd>cold kitchen = loveless marriage；died-out fire = lost love/hope；broken jars = broken heart；bird = Minnie/women；cage = marriage；knot = sewing, rope, marriage and female solidarity。</dd>
+          <dt>Perspective</dt><dd>Men see a crime scene and follow rules/facts；women see a home, remember, empathize, imagine and reconstruct Minnie’s life。</dd>
+          <dt>Exam angles</dt><dd>title irony；dead bird as motive；two investigative methods；symbols；women’s final silence as intentional solidarity；feminist criticism。</dd>
+        </dl>
+        <div class="placeholder">【建议插入截图：Drama（shared）.pptx · slides 27–28 · Men/Women 两种调查模式对照 + symbols 列表】</div>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">The men dismiss domestic details as “trifles,” but these neglected details enable the women to reconstruct Minnie’s oppressed life and discover the motive.</p>
+          <p class="quote">The kitchen functions not merely as a setting but as a record of emotional isolation and patriarchal control.</p>
+          <p class="quote">By concealing the dead bird, Mrs. Hale and Mrs. Peters replace the rigid logic of law with an ethic of care and female solidarity.</p>
+        </div>
+      </article>
+
+      <article id="egg">
+        <div class="work-title"><h3>Sherwood Anderson, “The Egg”</h3><span class="tag work">文本赏析重点</span><span class="tag high">symbol / POV 高频</span></div>
+        <dl class="work-grid">
+          <dt>Genre</dt><dd>short fiction / short story。</dd>
+          <dt>Theme</dt><dd>the American passion for getting up in the world；ambition, failure and disillusionment；fragility of human aspiration；futility and fate；pressure of patriarchal success。</dd>
+          <dt>Plot / Structure</dt><dd>uneventful, character-driven；three unsuccessful egg ventures：chicken farm → restaurant → entertaining a customer with eggs。Climax：father desperately tries to entertain Joe Kane。</dd>
+          <dt>Character</dt><dd>father = round, active protagonist；mother = flat and static；antagonist = fate / American passion for upward success。</dd>
+          <dt>Characterization</dt><dd>father through appearance, action, speech, feeling and others’ comments；mother mainly through appearance and role；both direct and indirect methods。</dd>
+          <dt>Style</dt><dd>colloquial, with wry humor；irony and detailed gestures build the climax。</dd>
+          <dt>Point of View</dt><dd>first-person narrator as non-protagonist (the son)；课件指出后段转向 third-person omniscient narration。</dd>
+          <dt>Symbols</dt><dd>egg = hope / American Dream；fragility / broken idealism；uncooperative fate；human beings in fate’s hands；egg-hen cycle = cycle of fate。Grotesque chicken mirrors father’s transformation into a human grotesque。</dd>
+          <dt>Exam angles</dt><dd>egg 的多重象征；father 的 character arc；narrator choice；wry humor / irony；American Dream 与失败。</dd>
+        </dl>
+        <div class="callout answer"><b>英文答题句：</b>
+          <p class="quote">The egg symbolizes both hope and fragility: it promises new life and success, yet its thin shell anticipates failure and broken idealism.</p>
+          <p class="quote">The father’s increasingly desperate performance turns him into a grotesque shaped by his naïve faith in upward success.</p>
+          <p class="quote">The son’s retrospective narration connects the father’s failure with the lasting psychological cost imposed on the next generation.</p>
+        </div>
+      </article>
+
+      <article id="midsummer">
+        <div class="work-title"><h3>William Shakespeare, <i>A Midsummer Night’s Dream</i></h3><span class="tag question">题型说明：不重复考察大题</span></div>
+        <p>指定材料仅提供有限复习点：它属于课程预读文本；“文学导论复习内容”用其说明 Elizabethan involved plot，即 <b>three interlocking plots</b>（三条相互交织的情节线）。题型说明明确写明已写过论文，因此“不重复考察”。</p>
+        <div class="callout warn"><b>不自行补充：</b>现有指定材料没有提供作者以外的完整主题、人物、语言和意象分析，因此本体系不扩写外部剧情知识。</div>
+      </article>
+    </section>
+
+    <section id="shortanswer">
+      <h2>Short-answer / Analysis Templates｜简答与简析模板</h2>
+      <h3>1. Definition + Contrast（术语辨析）</h3>
+      <div class="quote">X refers to ______, whereas Y refers to ______. The key distinction lies in ______. In literary analysis, X helps us identify ______, while Y helps us examine ______.</div>
+      <h3>2. Characterization</h3>
+      <div class="quote">There are two major ways of characterization: direct and indirect characterization. Direct characterization tells the reader what a character is like through explicit description or comment. Indirect characterization allows the character’s personality to emerge through speech, action, behavior, feeling, and other characters’ reactions.</div>
+      <h3>3. Imagery / Diction 简析</h3>
+      <div class="quote">The passage creates a strong ______ image through the words “______.” These concrete expressions do not merely provide information; they evoke the experience of ______ and contribute to the tone of ______.</div>
+      <h3>4. Symbol 简析</h3>
+      <div class="quote">On the literal level, ______ is ______. Symbolically, it represents ______. Its repeated appearance connects the character’s experience with the broader theme of ______.</div>
+      <h3>5. Speaker / Tone</h3>
+      <div class="quote">The speaker is ______ rather than the poet himself/herself. The tone is mainly ______, created by the diction, imagery, syntax and sound pattern. This tone reveals the speaker’s attitude toward ______.</div>
+      <h3>6. Plot / POV</h3>
+      <div class="quote">The story is told from a ______ point of view. This perspective controls how much the narrator, characters and readers know, and produces the effect of ______.</div>
+    </section>
+
+    <section id="essay">
+      <h2>Analytical Essay Templates｜赏析题模板</h2>
+      <div class="callout high"><b>题型说明要求：</b>写成 short comprehensive essay；要有分析和说明，前后串成文章。建议每段使用“证据 → 手法 → 效果 → 主题”的闭环。</div>
+      <h3>诗歌五段式</h3>
+      <ol>
+        <li><b>Introduction / thesis：</b>作者、题目、体裁、核心主题，以及形式如何服务主题。</li>
+        <li><b>Form and structure：</b>stanza、rhyme、meter、enjambment / caesura、结构转折。</li>
+        <li><b>Diction and imagery：</b>具体词语与感官意象，不要只列名称。</li>
+        <li><b>Figures, speaker and tone：</b>修辞如何暴露态度或塑造声音。</li>
+        <li><b>Conclusion：</b>回扣 thesis，概括形式与意义的统一。</li>
+      </ol>
+      <div class="quote">In “[title],” [author] explores ______ through a carefully controlled combination of form, diction, imagery and voice. The poem is structured as ______, and this formal pattern ______. More importantly, the image/phrase “______” functions as ______, suggesting ______. The speaker’s ______ tone is produced by ______ and reveals ______. Therefore, the poem turns ______ into a broader reflection on ______.</div>
+      <h3>小说 / 戏剧五段式</h3>
+      <ol>
+        <li><b>Introduction：</b>genre、setting / narrative situation、central conflict、theme。</li>
+        <li><b>Plot and perspective：</b>情节推进、climax、POV 或两种调查模式。</li>
+        <li><b>Characterization：</b>direct/indirect evidence；round/flat；character change。</li>
+        <li><b>Style and symbol：</b>diction、dialogue、irony、symbol；解释作用。</li>
+        <li><b>Conclusion：</b>形式选择如何深化社会/性别/理想主题。</li>
+      </ol>
+      <div class="quote">[Title] presents ______ through the conflict between ______ and ______. The work is not merely about ______; it also examines ______. Through [point of view / dialogue / characterization], the author reveals ______. The symbol of “______” develops from a concrete object into an image of ______. Its irony lies in the fact that ______. Taken together, these elements expose / criticize / affirm ______.</div>
+      <h3>Evidence sentence bank</h3>
+      <div class="two-col">
+        <p class="no-break"><b>Form：</b>The regular pattern of ______ contrasts with ______.</p>
+        <p class="no-break"><b>Repetition：</b>The repetition of “______” emphasizes the ubiquity / intensity of ______.</p>
+        <p class="no-break"><b>Diction：</b>The word “______” carries the connotation of ______.</p>
+        <p class="no-break"><b>Imagery：</b>The image appeals primarily to the sense of ______ and evokes ______.</p>
+        <p class="no-break"><b>Irony：</b>The irony is that ______, although ______.</p>
+        <p class="no-break"><b>Character：</b>This action indirectly characterizes X as ______.</p>
+        <p class="no-break"><b>POV：</b>By limiting the narrative to ______, the author makes the reader ______.</p>
+        <p class="no-break"><b>Theme：</b>Thus, the detail contributes to the broader theme of ______.</p>
+      </div>
+    </section>
+
+    <section id="conflicts">
+      <h2>材料冲突与使用说明</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>冲突点</th><th>材料差异</th><th>本体系处理</th></tr></thead>
+        <tbody>
+          <tr><td>“London” meter</td><td>单选与课件扫描支持 iambic tetrameter；判断题某条解析误写 iambic pentameter。</td><td><b>采用 iambic tetrameter + variations。</b></td></tr>
+          <tr><td>“Spanish Cloister” meter</td><td>Poetry PPT slide 88 与多数复习稿写 roughly trochaic tetrameter；文学评述3误写 iambic tetrameter。</td><td><b>采用课件：trochaic tetrameter with irregularities。</b></td></tr>
+          <tr><td>Dickinson stanza count</td><td>评述资料出现“4 quatrains + quintain”与“6 quatrains”等互相冲突说法；PPT正文显示17行但未明确分节标签。</td><td><b>不把有争议的 stanza count 设为死记结论；优先掌握17行文本、dashes、personification 与 movement。</b></td></tr>
+          <tr><td>Round/flat 与 dynamic/static</td><td>课件常用配对式简化；常识资料又分别给出“复杂度”和“变化”定义。</td><td><b>辨析时按两个维度作答，同时记住 <i>The Egg</i> 对人物的课件分类。</b></td></tr>
+          <tr><td>课件截图</td><td>可读取课件文字、样式标记和内嵌图片，但当前环境无法可靠渲染整张 PowerPoint 幻灯片。</td><td><b>保留文件名 + slide 编号 + 内容说明的醒目占位；不省略知识点。</b></td></tr>
+        </tbody>
+      </table></div>
+      <div class="callout"><b>来源范围：</b>Feminist Criticism 2025；Novel 2026；Drama；Introduction + Poetry；题型说明；单选；判断题；常识知识点；文学评述1/2/3及背诵汇总版；文学导论复习内容；文学导论期末考重点内容2.0。未使用网络资料。</div>
+    </section>
+  </main>
+</div>
+<button id="backTop" title="返回顶部">↑ 顶部</button>
+<script>
+  const body=document.body, main=document.getElementById('mainContent'); let input=document.getElementById('searchInput');
+  const originalMain=main.innerHTML;
+  function clearSearch(){main.innerHTML=originalMain;bindToolbar();observeSections();input=document.getElementById('searchInput')}
+  function doSearch(){
+    const q=document.getElementById('searchInput').value.trim();
+    if(!q)return;
+    const saved=q; main.innerHTML=originalMain; bindToolbar(); input=document.getElementById('searchInput'); input.value=saved;
+    const walker=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,{acceptNode(n){
+      if(!n.nodeValue.toLowerCase().includes(saved.toLowerCase()))return NodeFilter.FILTER_REJECT;
+      if(['SCRIPT','STYLE','MARK'].includes(n.parentElement.tagName))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    const re=new RegExp(saved.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
+    nodes.forEach(n=>{const span=document.createElement('span');span.innerHTML=n.nodeValue.replace(re,m=>`<mark class="search-hit">${m}</mark>`);n.replaceWith(...span.childNodes)});
+    document.querySelectorAll('details').forEach(d=>{if(d.querySelector('mark'))d.open=true});
+    const first=document.querySelector('mark.search-hit');if(first)first.scrollIntoView({behavior:'smooth',block:'center'});else alert('未找到匹配内容');
+    observeSections();
+  }
+  function bindToolbar(){
+    document.getElementById('searchBtn').onclick=doSearch;
+    document.getElementById('clearBtn').onclick=()=>{main.innerHTML=originalMain;bindToolbar();observeSections()};
+    document.getElementById('themeBtn').onclick=()=>{body.classList.toggle('dark');localStorage.setItem('lit-theme',body.classList.contains('dark')?'dark':'light');document.getElementById('themeBtn').textContent=body.classList.contains('dark')?'☀️':'🌙'};
+    document.getElementById('menuBtn').onclick=()=>body.classList.toggle('nav-open');
+    document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
+  }
+  function observeSections(){
+    const links=[...document.querySelectorAll('.toc a')], map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove('active'));map.get(e.target.id)?.classList.add('active')}}),{rootMargin:'-15% 0px -70% 0px'});
+    document.querySelectorAll('main section, main article[id]').forEach(s=>obs.observe(s));
+  }
+  if(localStorage.getItem('lit-theme')==='dark')body.classList.add('dark');
+  bindToolbar();observeSections();
+  document.getElementById('themeBtn').textContent=body.classList.contains('dark')?'☀️':'🌙';
+  document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>body.classList.remove('nav-open')));
+  const topBtn=document.getElementById('backTop');window.addEventListener('scroll',()=>topBtn.style.display=scrollY>600?'block':'none');topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+</script>
+</body>
+</html>
