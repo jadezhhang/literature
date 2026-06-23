@@ -823,7 +823,7 @@
   document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>body.classList.remove('nav-open')));
   const topBtn=document.getElementById('backTop');window.addEventListener('scroll',()=>topBtn.style.display=scrollY>600?'block':'none');topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 </script>
-<script src="assets/questions.js"></script>
-<script src="assets/quiz.js"></script>
+<script src="./questions.js"></script>
+<script src="./quiz.js"></script>
 </body>
 </html>
