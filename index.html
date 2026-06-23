@@ -36,7 +36,7 @@
     section{margin:46px 0}h2{font:700 33px/1.2 Georgia,"Songti SC",serif;color:var(--accent);border-bottom:2px solid var(--line);padding-bottom:10px}
     h3{margin:30px 0 12px;color:var(--accent2);font-size:22px}h4{margin:19px 0 7px}p{margin:8px 0}ul,ol{margin:8px 0;padding-left:22px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}
-    [hidden]{display:none!important}.exam-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}.page-mode .hero,.page-mode>.topic-tabs{display:none}.page-mode section{margin-top:26px}.toc a.active,.topic-tabs a.active{background:var(--panel2);color:var(--accent);font-weight:800}
+    [hidden]{display:none!important}.exam-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:760px}.exam-overview-grid .essay-card{grid-column:1/-1}.page-mode .hero,.page-mode>.topic-tabs{display:none}.page-mode section{margin-top:26px}.toc a.active,.topic-tabs a.active{background:var(--panel2);color:var(--accent);font-weight:800}
     .card h3,.card h4{margin-top:0}.callout{border-left:5px solid var(--accent);background:var(--panel);padding:14px 16px;border-radius:0 12px 12px 0;margin:14px 0}
     .callout.high{background:var(--high-bg);border-color:var(--gold)}.callout.mix{background:var(--mix-bg);border-color:#7778bf}.callout.answer{background:var(--answer-bg);border-color:#4f8fac}
     .callout.warn{background:var(--question-bg);border-color:var(--accent)}.compact li{margin:3px 0}
@@ -59,7 +59,7 @@
     mark.search-hit{background:#ffdf4d;color:#211b00;border-radius:3px;padding:0 1px}.source{color:var(--muted);font-size:12px}.conflict{border:1px solid var(--accent);background:var(--question-bg);padding:12px;border-radius:11px}
     #backTop{position:fixed;right:22px;bottom:22px;display:none;z-index:30;border-color:var(--accent);font-weight:800}
     .mobile-menu{display:none}.two-col{columns:2;column-gap:28px}.no-break{break-inside:avoid}
-    @media(max-width:900px){.exam-overview-grid{grid-template-columns:1fr;max-width:none}.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}.quiz-filters{grid-template-columns:1fr}.quiz-stats{grid-template-columns:repeat(2,1fr)}.quiz-nav button{flex:1}}
+    @media(max-width:900px){.exam-overview-grid{grid-template-columns:1fr;max-width:none}.exam-overview-grid .essay-card{grid-column:auto}.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}.quiz-filters{grid-template-columns:1fr}.quiz-stats{grid-template-columns:repeat(2,1fr)}.quiz-nav button{flex:1}}
     @media print{aside,.toolbar,#backTop{display:none!important}.layout{display:block}main{padding:0;max-width:none}.card,details{box-shadow:none;break-inside:avoid}details>div{display:block!important}}
   </style>
 </head>
@@ -74,9 +74,9 @@
       <a href="#drama">Drama 戏剧</a>
       <a href="#feminist">Feminist Criticism</a>
       <a href="#terms">Key Literary Terms</a>
-      <a href="#shortanswer">Short-answer Questions 简答题</a>
-      <a href="#comparison">Comparison Questions 辨析题</a>
-      <a href="#essay">Literary Analysis Templates</a>
+      <a href="#comparison">Short-answer Questions 辨析题</a>
+      <a href="#shortanswer">Brief Analysis Questions 简析题</a>
+      <a href="#essay">Analytical Essay 赏析题</a>
       <a href="#works">Key Works 重点作品</a>
       <a href="#practice">Practice Questions 刷题</a>
     </nav>
@@ -103,19 +103,20 @@
     <nav class="topic-tabs" aria-label="Review topics">
       <a href="#exam">Exam Overview</a><a href="#poetry">Poetry</a><a href="#novel">Novel</a><a href="#drama">Drama</a>
       <a href="#feminist">Feminist Criticism</a><a href="#terms">Key Terms</a>
-      <a href="#shortanswer">Short-answer Questions</a><a href="#comparison">Comparison Questions</a>
-      <a href="#essay">Analysis Templates</a><a href="#works">Key Works</a><a href="#practice">Practice Questions</a>
+      <a href="#comparison">Short-answer / 辨析</a><a href="#shortanswer">Brief Analysis / 简析</a>
+      <a href="#essay">Analytical Essay</a><a href="#works">Key Works</a><a href="#practice">Practice Questions</a>
     </nav>
 
     <section id="exam">
       <h2>Exam Overview｜题型与复习策略</h2>
       <div class="grid exam-overview-grid">
-        <article class="card"><h3>Choose the best answer</h3><p><b>30%</b>｜15题，每题2分</p><p>重点：定义识别、韵式、叙述视角、人物类型、戏剧类型、作品细节。</p></article>
-        <article class="card"><h3>True / False</h3><p><b>30%</b>｜20题，每题1.5分</p><p>重点：绝对化表述、概念偷换、作品形式与主题、术语定义反向判断。</p></article>
-        <article class="card"><h3>Short-answer</h3><p><b>10%</b>｜2题</p><p><span class="tag high">连续真题线索</span> sex vs gender；two ways of characterization。</p></article>
-        <article class="card"><h3>Comprehensive essay</h3><p><b>30%</b>｜两段选一段</p><p>诗歌与文本选段二选一；必须形成连贯短论文，不能只列要点。</p></article>
+        <article class="card"><h3>I. Multiple Choice</h3><p><b>30%</b>｜15 questions，每题2分</p><p>Choose the answer that best completes each statement. 重点：术语定义、作品细节、韵式/格律、叙述视角、人物类型、戏剧类型。</p></article>
+        <article class="card"><h3>II. True / False</h3><p><b>20%</b>｜20 questions，每题1分</p><p>Choose A if the statement is true, and B if it is false. 重点：绝对化表述、概念偷换、作品形式与主题、术语定义反向判断。</p></article>
+        <article class="card"><h3>III. Short-Answer Questions</h3><p><b>10%</b>｜2 questions｜辨析题</p><p>Provide a concise answer that identifies and explains the key points. 重点：概念对比、定义差异、核心判断维度。</p></article>
+        <article class="card"><h3>IV. Brief Analysis Questions</h3><p><b>10%</b>｜2 questions｜简析题</p><p>Give a short answer about the literary work. 重点：结合具体作品分析 imagery, diction, tone, characterization, symbol, POV 等。</p></article>
+        <article class="card essay-card"><h3>V. Analytical Essay</h3><p><b>30%</b>｜1 text｜赏析题</p><p>Based on the given excerpt, write a short comprehensive essay according to the specified requirements. 必须形成连贯分析，不能只列要点。</p></article>
       </div>
-      <div class="callout high"><b>最高优先级：</b>题型说明记载，sex vs gender 与 characterization 已在往年简答中出现；“重点内容2.0”又注明 2024 年重复考察。复习时应能直接用英文定义、对比并举文学分析用途。</div>
+      <div class="callout high"><b>最高优先级：</b>先按题型分配时间：客观题保定义与作品识别；辨析题背“定义 + 比较维度 + 核心差异”；简析题与赏析题训练“证据 → 手法 → 效果 → 主题”的完整表达。</div>
       <h3>大题范围与优先级</h3>
       <div class="table-wrap"><table>
         <thead><tr><th>层级</th><th>作品</th><th>材料依据</th><th>备考动作</th></tr></thead>
@@ -492,9 +493,9 @@
       </table></div>
     </section>
     <section id="shortanswer">
-      <h2>Short-answer Questions｜简答与简析模板</h2>
-      <h3>1. Definition + Contrast（术语辨析）</h3>
-      <div class="quote">X refers to ______, whereas Y refers to ______. The key distinction lies in ______. In literary analysis, X helps us identify ______, while Y helps us examine ______.</div>
+      <h2>Brief Analysis Questions｜简析题模板</h2>
+      <h3>1. General brief analysis structure（简析通用结构）</h3>
+      <div class="quote">The passage/detail uses ______ to present ______. More specifically, the word/image/action “______” suggests ______. Therefore, this detail contributes to the theme of ______.</div>
       <h3>2. Characterization</h3>
       <div class="quote">There are two major ways of characterization: direct and indirect characterization. Direct characterization tells the reader what a character is like through explicit description or comment. Indirect characterization allows the character’s personality to emerge through speech, action, behavior, feeling, and other characters’ reactions.</div>
       <h3>3. Imagery / Diction 简析</h3>
@@ -507,8 +508,9 @@
       <div class="quote">The story is told from a ______ point of view. This perspective controls how much the narrator, characters and readers know, and produces the effect of ______.</div>
     </section>
     <section id="comparison">
-      <h2>Comparison Questions｜辨析题</h2>
+      <h2>Short-answer Questions｜辨析题</h2>
       <div class="callout high"><b>答题方法：</b>先指出比较维度，再分别给定义，最后用一句“核心差异”收束。不要只写中文标签。</div>
+      <div class="quote">X refers to ______, whereas Y refers to ______. The key distinction lies in ______. In literary analysis, X helps us identify ______, while Y helps us examine ______.</div>
       <details open><summary>Sex vs Gender <span class="tag high">连续真题 / 高频</span></summary><div>
         <div class="table-wrap"><table><tr><th></th><th>Sex</th><th>Gender</th></tr>
           <tr><td>中文</td><td>生理性别</td><td>社会性别</td></tr>
@@ -544,6 +546,12 @@
         <p><b>Blank verse：</b>unrhymed <u>iambic pentameter</u> — meter without rhyme.</p>
         <p><b>Free verse：</b>without regular metrical patterns；may be rhymed or unrhymed.</p>
       </div></details>
+      <details><summary>End-stopped Line vs Run-on Line / Enjambment <span class="tag mix">诗歌行末停顿</span></summary><div>
+        <p><b>End-stopped line：</b>a poetic line whose syntactic unit or sense unit is completed at the line ending；行末意思相对完整，通常有明显停顿。</p>
+        <p><b>Run-on line / Enjambment：</b>a line in which the sentence or poetic argument runs beyond the line ending without a full pause or punctuation；意思延续到下一行，行末停顿较短。</p>
+        <p><b>核心维度：</b>whether the sentence / meaning stops at the line ending.</p>
+        <p class="quote">An end-stopped line gives a sense of closure and regularity, whereas a run-on line creates continuity, movement and sometimes suspense.</p>
+      </div></details>
       <details><summary>Alliteration / Assonance / Consonance</summary><div>
         <p><b>Alliteration：</b>initial consonant repetition；<b>Assonance：</b>vowel sound repetition；<b>Consonance：</b>consonant sound repetition, especially non-initial/end patterns in the course materials.</p>
       </div></details>
@@ -566,7 +574,7 @@
       </div></details>
     </section>
     <section id="essay">
-      <h2>Literary Analysis Templates｜赏析题模板</h2>
+      <h2>Analytical Essay｜赏析题模板</h2>
       <div class="callout high"><b>题型说明要求：</b>写成 short comprehensive essay；要有分析和说明，前后串成文章。建议每段使用“证据 → 手法 → 效果 → 主题”的闭环。</div>
       <h3>诗歌五段式</h3>
       <ol>
