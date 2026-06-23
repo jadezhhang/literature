@@ -2799,6 +2799,344 @@ const QUESTION_BANK = [
     ],
     "answer": "A",
     "explanation": "《第130号十四行诗》的押韵模式是ABABCDCDEFEFGG。因此，这个陈述是正确的。正确答案是(A) True。"
+  },
+  {
+    "id": "supp_001",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Poetry",
+    "question": "Which term refers to a rhyme that ends with an unstressed syllable?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Masculine rhyme"
+      },
+      {
+        "label": "B",
+        "text": "Feminine rhyme"
+      },
+      {
+        "label": "C",
+        "text": "Eye rhyme"
+      },
+      {
+        "label": "D",
+        "text": "Para-rhyme"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Feminine rhyme ends with an unstressed syllable, such as smiling/filing."
+  },
+  {
+    "id": "supp_002",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Poetry",
+    "question": "In meter, pentameter means that a line contains ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "three feet"
+      },
+      {
+        "label": "B",
+        "text": "four feet"
+      },
+      {
+        "label": "C",
+        "text": "five feet"
+      },
+      {
+        "label": "D",
+        "text": "six feet"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Pentameter means five feet per line. Iambic pentameter is especially important in sonnets."
+  },
+  {
+    "id": "supp_003",
+    "type": "truefalse",
+    "source": "常识补充",
+    "topic": "Poetry",
+    "question": "A run-on line or enjambment continues the sense of a line into the next line without a full stop.",
+    "options": [
+      {
+        "label": "A",
+        "text": "True"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Enjambment means the poetic argument or sentence runs over the line ending."
+  },
+  {
+    "id": "supp_004",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Poetry",
+    "question": "Which sound device repeats beginning consonant sounds?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Assonance"
+      },
+      {
+        "label": "B",
+        "text": "Consonance"
+      },
+      {
+        "label": "C",
+        "text": "Alliteration"
+      },
+      {
+        "label": "D",
+        "text": "Eye rhyme"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Alliteration, or head rhyme, repeats initial consonant sounds."
+  },
+  {
+    "id": "supp_005",
+    "type": "truefalse",
+    "source": "常识补充",
+    "topic": "Poetry",
+    "question": "Blank verse is rhymed iambic pentameter.",
+    "options": [
+      {
+        "label": "A",
+        "text": "True"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Blank verse is unrhymed iambic pentameter: it has meter but no rhyme."
+  },
+  {
+    "id": "supp_006",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Novel",
+    "question": "In the modern sense, fiction includes short stories, novella, novel, romance, fable and other ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "verse narratives"
+      },
+      {
+        "label": "B",
+        "text": "prose narratives"
+      },
+      {
+        "label": "C",
+        "text": "lyric poems"
+      },
+      {
+        "label": "D",
+        "text": "dramatic speeches"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Fiction in the modern sense includes invented prose narratives, in contrast to verse narratives such as epic."
+  },
+  {
+    "id": "supp_007",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Novel",
+    "question": "Setting refers to the ______ in which the events take place and the plot evolves.",
+    "options": [
+      {
+        "label": "A",
+        "text": "time, place and environment"
+      },
+      {
+        "label": "B",
+        "text": "rhyme and meter"
+      },
+      {
+        "label": "C",
+        "text": "author’s biography"
+      },
+      {
+        "label": "D",
+        "text": "final resolution"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Setting is the time, place and environment of the story."
+  },
+  {
+    "id": "supp_008",
+    "type": "truefalse",
+    "source": "常识补充",
+    "topic": "Novel",
+    "question": "A foil usually emphasizes another character through contrast or similarity.",
+    "options": [
+      {
+        "label": "A",
+        "text": "True"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "answer": "A",
+    "explanation": "A foil functions by contrast or similarity to bring out traits of another character, often the protagonist."
+  },
+  {
+    "id": "supp_009",
+    "type": "truefalse",
+    "source": "常识补充",
+    "topic": "Novel",
+    "question": "A round character can surprise the reader without losing credibility.",
+    "options": [
+      {
+        "label": "A",
+        "text": "True"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Round characters are complex and three-dimensional; they may surprise the reader while remaining convincing."
+  },
+  {
+    "id": "supp_010",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Drama",
+    "question": "Which part of dramatic plot introduces time, place, characters and the initial conflict?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Climax"
+      },
+      {
+        "label": "B",
+        "text": "Denouement"
+      },
+      {
+        "label": "C",
+        "text": "Exposition"
+      },
+      {
+        "label": "D",
+        "text": "Falling action"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Exposition sets the action in time and place, acquaints us with characters, and initiates conflict."
+  },
+  {
+    "id": "supp_011",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Drama",
+    "question": "In drama, music includes ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "only songs performed on stage"
+      },
+      {
+        "label": "B",
+        "text": "all auditory aspects, including sound, silence and tonal pattern"
+      },
+      {
+        "label": "C",
+        "text": "only background instruments"
+      },
+      {
+        "label": "D",
+        "text": "only rhymed dialogue"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Music in drama includes the expressiveness of sound and silence and the tonal pattern of spoken words."
+  },
+  {
+    "id": "supp_012",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Drama",
+    "question": "Feminist theatre mainly explores issues of women’s ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "oppression and rights"
+      },
+      {
+        "label": "B",
+        "text": "military glory"
+      },
+      {
+        "label": "C",
+        "text": "supernatural destiny"
+      },
+      {
+        "label": "D",
+        "text": "courtly love"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Feminist theatre explores women’s oppression and rights and seeks positive change through representation."
+  },
+  {
+    "id": "supp_013",
+    "type": "truefalse",
+    "source": "常识补充",
+    "topic": "Drama",
+    "question": "Foreshadowing can build suspense and make later actions credible.",
+    "options": [
+      {
+        "label": "A",
+        "text": "True"
+      },
+      {
+        "label": "B",
+        "text": "False"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Foreshadowing consists of early clues that build suspense and make subsequent action credible."
+  },
+  {
+    "id": "supp_014",
+    "type": "multiple",
+    "source": "常识补充",
+    "topic": "Literary Terms",
+    "question": "Which pair correctly describes end rhyme and internal rhyme?",
+    "options": [
+      {
+        "label": "A",
+        "text": "End rhyme occurs at line endings; internal rhyme occurs inside a line."
+      },
+      {
+        "label": "B",
+        "text": "End rhyme is visual only; internal rhyme is always silent."
+      },
+      {
+        "label": "C",
+        "text": "End rhyme has no sound; internal rhyme has no meaning."
+      },
+      {
+        "label": "D",
+        "text": "End rhyme is feminine; internal rhyme is masculine."
+      }
+    ],
+    "answer": "A",
+    "explanation": "End rhyme depends on line-end position, while internal rhyme appears within a line or around a caesura."
   }
 ];
 if (typeof window !== "undefined") window.QUESTION_BANK = QUESTION_BANK;

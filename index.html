@@ -36,6 +36,7 @@
     section{margin:46px 0}h2{font:700 33px/1.2 Georgia,"Songti SC",serif;color:var(--accent);border-bottom:2px solid var(--line);padding-bottom:10px}
     h3{margin:30px 0 12px;color:var(--accent2);font-size:22px}h4{margin:19px 0 7px}p{margin:8px 0}ul,ol{margin:8px 0;padding-left:22px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:15px}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}
+    [hidden]{display:none!important}.exam-overview-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:720px}.page-mode .hero,.page-mode>.topic-tabs{display:none}.page-mode section{margin-top:26px}.toc a.active,.topic-tabs a.active{background:var(--panel2);color:var(--accent);font-weight:800}
     .card h3,.card h4{margin-top:0}.callout{border-left:5px solid var(--accent);background:var(--panel);padding:14px 16px;border-radius:0 12px 12px 0;margin:14px 0}
     .callout.high{background:var(--high-bg);border-color:var(--gold)}.callout.mix{background:var(--mix-bg);border-color:#7778bf}.callout.answer{background:var(--answer-bg);border-color:#4f8fac}
     .callout.warn{background:var(--question-bg);border-color:var(--accent)}.compact li{margin:3px 0}
@@ -58,7 +59,7 @@
     mark.search-hit{background:#ffdf4d;color:#211b00;border-radius:3px;padding:0 1px}.source{color:var(--muted);font-size:12px}.conflict{border:1px solid var(--accent);background:var(--question-bg);padding:12px;border-radius:11px}
     #backTop{position:fixed;right:22px;bottom:22px;display:none;z-index:30;border-color:var(--accent);font-weight:800}
     .mobile-menu{display:none}.two-col{columns:2;column-gap:28px}.no-break{break-inside:avoid}
-    @media(max-width:900px){.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}.quiz-filters{grid-template-columns:1fr}.quiz-stats{grid-template-columns:repeat(2,1fr)}.quiz-nav button{flex:1}}
+    @media(max-width:900px){.exam-overview-grid{grid-template-columns:1fr;max-width:none}.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}.quiz-filters{grid-template-columns:1fr}.quiz-stats{grid-template-columns:repeat(2,1fr)}.quiz-nav button{flex:1}}
     @media print{aside,.toolbar,#backTop{display:none!important}.layout{display:block}main{padding:0;max-width:none}.card,details{box-shadow:none;break-inside:avoid}details>div{display:block!important}}
   </style>
 </head>
@@ -107,7 +108,7 @@
 
     <section id="exam">
       <h2>Exam Overview｜题型与复习策略</h2>
-      <div class="grid">
+      <div class="grid exam-overview-grid">
         <article class="card"><h3>Choose the best answer</h3><p><b>30%</b>｜15题，每题2分</p><p>重点：定义识别、韵式、叙述视角、人物类型、戏剧类型、作品细节。</p></article>
         <article class="card"><h3>True / False</h3><p><b>30%</b>｜20题，每题1.5分</p><p>重点：绝对化表述、概念偷换、作品形式与主题、术语定义反向判断。</p></article>
         <article class="card"><h3>Short-answer</h3><p><b>10%</b>｜2题</p><p><span class="tag high">连续真题线索</span> sex vs gender；two ways of characterization。</p></article>
@@ -162,9 +163,24 @@
           <tr><td class="term">Trochee</td><td>扬抑格</td><td>stressed + unstressed (/ ×)</td><td>English, college；Browning 重点诗大体采用 trochaic tetrameter。</td></tr>
           <tr><td class="term">Dactyl</td><td>扬抑抑格</td><td>stressed + two unstressed</td><td>actually, negative。</td></tr>
           <tr><td class="term">Anapaest</td><td>抑抑扬格</td><td>two unstressed + stressed</td><td>interrupt, understand。</td></tr>
+          <tr><td class="term">Spondee</td><td>扬扬格</td><td>two stressed syllables</td><td>常作格律变体或强调，不作为最常见基础格。</td></tr>
+          <tr><td class="term">Pyrrhic</td><td>抑抑格</td><td>two unstressed syllables</td><td>常与其他音步一起分析，单独作为主格较少。</td></tr>
           <tr><td class="term">Meter</td><td>格律</td><td>the recurring pattern of stress and pause; described by the type and number of the predominating foot</td><td>先说 foot 类型，再说每行 foot 数量。</td></tr>
           <tr><td class="term">Iambic pentameter</td><td>抑扬格五音步</td><td>five predominantly iambic feet per line</td><td>Shakespearean sonnet 高频。</td></tr>
           <tr><td class="term">Metric variation</td><td>格律变异</td><td>deviation from the expected metrical pattern</td><td>用于强调，或避免机械单调；包括 inversion、headless verse、catalexis。</td></tr>
+        </tbody>
+      </table></div>
+      <h4>Number of feet｜每行音步数量</h4>
+      <div class="table-wrap"><table>
+        <thead><tr><th>名称</th><th>音步数</th><th>考试识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">monometer</td><td>one foot</td><td>单音步。</td></tr>
+          <tr><td class="term">dimeter</td><td>two feet</td><td>双音步。</td></tr>
+          <tr><td class="term">trimeter</td><td>three feet</td><td>三音步。</td></tr>
+          <tr><td class="term">tetrameter</td><td>four feet</td><td>如 trochaic tetrameter。</td></tr>
+          <tr><td class="term">pentameter</td><td>five feet</td><td>如 iambic pentameter；sonnet 高频。</td></tr>
+          <tr><td class="term">hexameter</td><td>six feet</td><td>iambic hexameter 又可称 Alexandrine。</td></tr>
+          <tr><td class="term">heptameter / octameter</td><td>seven / eight feet</td><td>七音步 / 八音步。</td></tr>
         </tbody>
       </table></div>
       <h3>2. Rhyme 与 Sound</h3>
@@ -179,6 +195,8 @@
           <tr><td class="term">Eye rhyme</td><td>similar spelling but different pronunciation</td><td>blood/hood; daughter/laughter</td><td>“appeals to the eye”。</td></tr>
           <tr><td class="term">Masculine rhyme</td><td>ends on a stressed syllable</td><td>smile/file</td><td>勿按“男性主题”理解。</td></tr>
           <tr><td class="term">Feminine rhyme</td><td>ends with an unstressed syllable</td><td>smiling/filing</td><td>通常多音节。</td></tr>
+          <tr><td class="term">End rhyme</td><td>rhyming words appear at the end of lines</td><td>line-end rhyme</td><td>看诗行末尾。</td></tr>
+          <tr><td class="term">Internal rhyme</td><td>rhyming words appear inside a line or around a caesura</td><td>I met a man with a skin of tan</td><td>看行内或停顿前后。</td></tr>
         </tbody>
       </table></div>
       <h3>3. Stanza / Rhyme Scheme / Verse Form</h3>
@@ -186,6 +204,8 @@
         <div class="card"><h4>Stanza names</h4><p>2 couplet；3 tercet/triplet；4 quatrain；5 quintain/cinquain；6 sextain；7 septet；8 octave；9 Spenserian stanza；14 sonnet。</p></div>
         <div class="card"><h4>High-frequency schemes</h4><p>Heroic couplet: aa bb cc…；Ballad: abcb / abab；Terza rima: aba bcb cdc；Spenserian stanza: ababbcbcc。</p></div>
         <div class="card"><h4>Sonnets</h4><p>Shakespearean: <b>abab cdcd efef gg</b>；Petrarchan: octave + sestet，课件示例 abbaabba cdccdc；Spenserian: abab bcbc cdcd ee。</p></div>
+        <div class="card"><h4>Enjambment / Run-on line</h4><p>A sentence or poetic argument runs beyond the line ending without a full pause or punctuation；行末停顿较短，意思要延续到下一行。</p></div>
+        <div class="card"><h4>End-stopped line</h4><p>A line whose syntactic unit is completed at the line end；通常有较明显停顿，和 run-on line 相对。</p></div>
       </div>
       <h3>4. Imagery, Diction, Voice</h3>
       <div class="grid">
@@ -245,9 +265,20 @@
         <li>条件：Enlightenment 对 reason / actuality 的重视；印刷技术与市场发展；城市人口识字率提高。</li>
         <li>早期代表：Defoe, <i>Robinson Crusoe</i> (1719), <i>Moll Flanders</i> (1722)；Swift, <i>Gulliver’s Travels</i> (1726)。</li>
         <li>复习内容 PDF 另列：欧洲第一部小说 <i>Don Quixote</i> (1605)；英国第一部小说 <i>Robinson Crusoe</i> (1719)。</li>
+        <li><b>Fiction in the modern sense：</b>includes short story, novella / short novel, novel, romance, fable and other prose narratives；与 verse narratives 如 epic 区分。</li>
       </ul>
       <h3>2. Elements of Novel</h3>
-      <div class="flow"><span>Plot</span><span>Characterization</span><span>Theme</span><span>Style</span><span>Point of View</span><span>Setting</span></div>
+      <div class="flow"><span>Setting</span><span>Plot</span><span>Structure</span><span>Character</span><span>Theme</span><span>Style</span><span>Point of View</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Element</th><th>Definition</th><th>复习抓手</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Setting</td><td>the time, place and environment in which events take place and the plot evolves</td><td>时间、地点、社会/心理环境。</td></tr>
+          <tr><td class="term">Plot</td><td>the pattern of events and situations</td><td>不只是发生了什么，还看事件之间的组织。</td></tr>
+          <tr><td class="term">Structure</td><td>the shape of the whole story</td><td>整体安排、顺序、框架。</td></tr>
+          <tr><td class="term">Theme</td><td>the main idea of a work, not simply the subject</td><td>subject 是“写什么”，theme 是“表达什么意义”。</td></tr>
+          <tr><td class="term">Style</td><td>the verbal identity of the work</td><td>diction, syntax, figures, irony, symbol, tone。</td></tr>
+        </tbody>
+      </table></div>
       <p><b>Most technical aspect：</b>POV / narrative point of view。</p>
       <h3>3. Narrator & Point of View</h3>
       <div class="table-wrap"><table>
@@ -266,6 +297,19 @@
         <li><b>Direct characterization：</b>the narrator/author directly tells or comments on a character’s appearance or personality；常以外貌、名称、直接说明呈现。</li>
         <li><b>Indirect characterization：</b>the author steps aside and lets characters reveal themselves through dialogue, action, behavior, feeling and others’ reactions；reader infers the trait。</li>
       </ul>
+      <h4>Character types｜人物类型</h4>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Type</th><th>核心含义</th><th>考试识别点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Protagonist</td><td>main or central character</td><td>通常最能引起读者关注；不等于道德上完美。</td></tr>
+          <tr><td class="term">Antagonist</td><td>opposing character or force</td><td>可以是人物，也可以是社会、自然、超自然力量。</td></tr>
+          <tr><td class="term">Foil</td><td>minor character used by contrast or similarity to emphasize the protagonist</td><td>陪衬、调剂气氛。</td></tr>
+          <tr><td class="term">Stock / type character</td><td>recognizable stereotyped character</td><td>守财奴、恶棍、长舌妇等。</td></tr>
+          <tr><td class="term">Piece-of-furniture character</td><td>minor character void of personality</td><td>功能像道具，只服务情节或主要人物。</td></tr>
+          <tr><td class="term">Round character</td><td>three-dimensional, complex, capable of surprising the reader without losing credibility</td><td>复杂、充分发展，可有矛盾特征。</td></tr>
+          <tr><td class="term">Flat character</td><td>two-dimensional, underdeveloped, usually static</td><td>一两个特征即可概括。</td></tr>
+        </tbody>
+      </table></div>
       <h3>5. Style</h3>
       <p><b>Style = the verbal identity of the work</b>，即 how to write。观察 diction、syntax、figures of speech、irony、symbol 与 narrative tone。</p>
       <div class="topic-review-block">
@@ -307,10 +351,20 @@
         <article class="card"><h4>Plot</h4><p>“the soul of tragedy”；情节结构、冲突与因果。</p></article>
         <article class="card"><h4>Thought</h4><p>the reasoning aspect；概括 moral 并指向全剧 symbolic meaning。</p></article>
         <article class="card"><h4>Diction</h4><p>dynamic、clear、oral、interesting but economical、appropriate to character and situation。</p></article>
-        <article class="card"><h4>Spectacle / Music</h4><p>所有视觉方面 / 所有听觉方面；分别营造环境、气氛与 mood。</p></article>
+        <article class="card"><h4>Spectacle / Music</h4><p>Spectacle 指 scenery, lighting, costume, make-up, movement 等视觉方面；Music 指 sound / silence 与 spoken word 的 tonal pattern，用来加强 mood。</p></article>
       </div>
       <h3>2. Plot Structure</h3>
       <div class="flow"><span>Exposition</span><i>→</i><span>Point of attack / conflict</span><i>→</i><span>Rising action & complication</span><i>→</i><span>Climax / reversal</span><i>→</i><span>Falling action</span><i>→</i><span>Denouement</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Term</th><th>Function</th><th>判断点</th></tr></thead>
+        <tbody>
+          <tr><td class="term">Exposition</td><td>sets action in time and place, introduces characters and initiates conflict</td><td>必须 clear and quick；也可放入 foreshadowing。</td></tr>
+          <tr><td class="term">Foreshadowing</td><td>early clues make later action credible, build suspense and tension</td><td>也能揭示人物、推动 complication。</td></tr>
+          <tr><td class="term">Complication</td><td>develops the conflict with depth and breadth</td><td>冲突复杂化，不只是“出现问题”。</td></tr>
+          <tr><td class="term">Climax / reversal</td><td>turning point or highest tension</td><td>之后进入 falling action。</td></tr>
+          <tr><td class="term">Denouement / resolution</td><td>the ending that resolves or settles the action</td><td>结局、收束。</td></tr>
+        </tbody>
+      </table></div>
       <p class="source">Plot structure 与关键术语的原始页面已选入上方 Key Slide Previews。</p>
       <h3>3. Genres of Drama</h3>
       <div class="table-wrap"><table>
@@ -322,6 +376,7 @@
           <tr><td class="term">Melodrama</td><td>sensational, exaggerated, emotion-driven suspense</td><td>give a thrill；善恶极端，正义在快乐结局中获胜。</td></tr>
           <tr><td class="term">Farce</td><td>highly exaggerated, extravagant, improbable comedy</td><td>give a laugh；physical humor / absurdity / one-dimensional characters。</td></tr>
           <tr><td class="term">Problem play</td><td>realistic drama of social criticism developed in the 19th century</td><td>角色辩论冲突立场；expose social ills；stimulate discussion。</td></tr>
+          <tr><td class="term">Feminist theatre</td><td>theatre exploring women’s oppression and rights</td><td>subverts patriarchal “image of woman”；关注 politics, sexual oppression, wage inequities, women’s invisibility。</td></tr>
         </tbody>
       </table></div>
       <div class="topic-review-block">
@@ -393,9 +448,15 @@
         <thead><tr><th>English term</th><th>中文</th><th>English definition / explanation</th><th>考试识别点</th></tr></thead>
         <tbody>
           <tr><td class="term">Enjambment</td><td>跨行连续</td><td>a sentence/argument runs beyond the line ending without pause or punctuation</td><td>run-on line；迫使阅读继续到下一行。</td></tr>
+          <tr><td class="term">End-stopped line</td><td>结句行</td><td>a poetic line that forms a complete syntactic unit at the line ending</td><td>行末停顿较明显。</td></tr>
+          <tr><td class="term">Run-on line</td><td>跨行句</td><td>a line whose meaning continues into the next line</td><td>与 enjambment 相关；行末停顿较短。</td></tr>
           <tr><td class="term">Caesura</td><td>诗行中停顿</td><td>a pause within a line, often marked by punctuation or syntax</td><td>“Marks of weakness, marks of woe.”</td></tr>
           <tr><td class="term">Blank verse</td><td>素体诗</td><td>unrhymed iambic pentameter</td><td>有格律、无押韵。</td></tr>
           <tr><td class="term">Free verse</td><td>自由诗</td><td>verse without regular metrical patterns; may be rhymed or unrhymed</td><td>核心是无固定格律，不等于绝不押韵。</td></tr>
+          <tr><td class="term">End rhyme</td><td>尾韵</td><td>rhyming words appear at the end of lines</td><td>判断位置。</td></tr>
+          <tr><td class="term">Internal rhyme</td><td>行中韵</td><td>rhyming words appear inside a line or around a caesura</td><td>判断位置。</td></tr>
+          <tr><td class="term">Masculine rhyme</td><td>男韵</td><td>rhyme ending with a stressed syllable</td><td>如 smile/file。</td></tr>
+          <tr><td class="term">Feminine rhyme</td><td>女韵</td><td>rhyme ending with an unstressed syllable</td><td>如 smiling/filing。</td></tr>
           <tr><td class="term">Denotation</td><td>字面义</td><td>literal meaning</td><td>与 connotation 对照。</td></tr>
           <tr><td class="term">Connotation</td><td>隐含/联想义</td><td>overtone depending on association, allusion, implication and context</td><td>诗歌措辞分析核心。</td></tr>
           <tr><td class="term">Metaphor</td><td>隐喻</td><td>direct comparison without “like” or “as”</td><td>“mind-forg’d manacles”。</td></tr>
@@ -770,58 +831,113 @@
 </div>
 <button id="backTop" title="返回顶部">↑ 顶部</button>
 <script>
-  const body=document.body, main=document.getElementById('mainContent'); let input=document.getElementById('searchInput');
-  const originalMain=main.innerHTML;
-  function clearSearch(){main.innerHTML=originalMain;bindToolbar();observeSections();input=document.getElementById('searchInput')}
-  function doSearch(){
-    const q=document.getElementById('searchInput').value.trim();
-    if(!q)return;
-    const saved=q; main.innerHTML=originalMain; bindToolbar(); input=document.getElementById('searchInput'); input.value=saved;
-    const walker=document.createTreeWalker(main,NodeFilter.SHOW_TEXT,{acceptNode(n){
-      if(!n.nodeValue.toLowerCase().includes(saved.toLowerCase()))return NodeFilter.FILTER_REJECT;
-      if(['SCRIPT','STYLE','MARK'].includes(n.parentElement.tagName))return NodeFilter.FILTER_REJECT;
-      return NodeFilter.FILTER_ACCEPT;
-    }});
-    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
-    const re=new RegExp(saved.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
-    nodes.forEach(n=>{const span=document.createElement('span');span.innerHTML=n.nodeValue.replace(re,m=>`<mark class="search-hit">${m}</mark>`);n.replaceWith(...span.childNodes)});
-    document.querySelectorAll('details').forEach(d=>{if(d.querySelector('mark'))d.open=true});
-    const first=document.querySelector('mark.search-hit');if(first)first.scrollIntoView({behavior:'smooth',block:'center'});else alert('未找到匹配内容');
-    observeSections();
+  const body = document.body;
+  const main = document.getElementById('mainContent');
+  const SECTION_IDS = ['exam','poetry','novel','drama','feminist','terms','comparison','works','shortanswer','essay','practice','conflicts'];
+  const ARTICLE_TO_SECTION = {london:'works', sonnet130:'works', train:'works', cloister:'works', trifles:'works', egg:'works', midsummer:'works'};
+  const originalMain = main.innerHTML;
+
+  function getHashId(){
+    return decodeURIComponent((location.hash || '').replace(/^#/, '')).trim();
   }
-  function bindToolbar(){
-    document.getElementById('searchBtn').onclick=doSearch;
-    document.getElementById('clearBtn').onclick=()=>{main.innerHTML=originalMain;bindToolbar();observeSections()};
-    document.getElementById('themeBtn').onclick=()=>{body.classList.toggle('dark');localStorage.setItem('lit-theme',body.classList.contains('dark')?'dark':'light');document.getElementById('themeBtn').textContent=body.classList.contains('dark')?'☀️':'🌙'};
-    document.getElementById('menuBtn').onclick=()=>body.classList.toggle('nav-open');
-    document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
-    setupSlideFallbacks();
-    if(window.initQuiz)window.initQuiz();
+  function resolveSectionId(hashId = getHashId()){
+    if (SECTION_IDS.includes(hashId)) return hashId;
+    if (ARTICLE_TO_SECTION[hashId]) return ARTICLE_TO_SECTION[hashId];
+    return 'exam';
   }
-  function setupSlideFallbacks(){
-    document.querySelectorAll('.slide-card img').forEach(img=>{
-      let message=img.nextElementSibling;
-      if(!message||!message.classList.contains('slide-error')){
-        message=document.createElement('p');
-        message.className='slide-error';
-        message.textContent='Slide image unavailable. Please check assets/key_slides path.';
-        img.insertAdjacentElement('afterend',message);
-      }
-      const showError=()=>{img.style.display='none';message.style.display='block'};
-      img.addEventListener('error',showError,{once:true});
-      if(img.complete&&img.naturalWidth===0)showError();
+  function updateActiveLinks(activeId){
+    document.querySelectorAll('.toc a,.topic-tabs a').forEach(a => {
+      const id = (a.getAttribute('href') || '').replace(/^#/, '');
+      a.classList.toggle('active', id === activeId);
     });
   }
-  function observeSections(){
-    const links=[...document.querySelectorAll('.toc a')], map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
-    const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.remove('active'));map.get(e.target.id)?.classList.add('active')}}),{rootMargin:'-15% 0px -70% 0px'});
-    document.querySelectorAll('main section, main article[id]').forEach(s=>obs.observe(s));
+  function showPageByHash(options = {}){
+    const hashId = getHashId();
+    const activeId = resolveSectionId(hashId);
+    main.classList.add('page-mode');
+    main.querySelectorAll('section[id]').forEach(section => {
+      if (SECTION_IDS.includes(section.id)) section.hidden = section.id !== activeId;
+    });
+    updateActiveLinks(activeId);
+    if (options.scroll) {
+      const target = document.getElementById(hashId) || document.getElementById(activeId);
+      requestAnimationFrame(() => target?.scrollIntoView({behavior:'smooth', block:'start'}));
+    }
   }
-  if(localStorage.getItem('lit-theme')==='dark')body.classList.add('dark');
-  bindToolbar();observeSections();
-  document.getElementById('themeBtn').textContent=body.classList.contains('dark')?'☀️':'🌙';
-  document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>body.classList.remove('nav-open')));
-  const topBtn=document.getElementById('backTop');window.addEventListener('scroll',()=>topBtn.style.display=scrollY>600?'block':'none');topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  function resetMain(){
+    main.innerHTML = originalMain;
+    bindToolbar();
+    showPageByHash();
+  }
+  function doSearch(){
+    const q = document.getElementById('searchInput').value.trim();
+    if(!q) return;
+    main.innerHTML = originalMain;
+    bindToolbar();
+    const input = document.getElementById('searchInput');
+    input.value = q;
+    const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {acceptNode(n){
+      if(!n.nodeValue.toLowerCase().includes(q.toLowerCase())) return NodeFilter.FILTER_REJECT;
+      if(['SCRIPT','STYLE','MARK'].includes(n.parentElement.tagName)) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }});
+    const nodes = [];
+    while(walker.nextNode()) nodes.push(walker.currentNode);
+    const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');
+    nodes.forEach(n => {
+      const span = document.createElement('span');
+      span.innerHTML = n.nodeValue.replace(re, m => `<mark class="search-hit">${m}</mark>`);
+      n.replaceWith(...span.childNodes);
+    });
+    document.querySelectorAll('details').forEach(d => { if(d.querySelector('mark')) d.open = true; });
+    const first = document.querySelector('mark.search-hit');
+    if(first){
+      const section = first.closest('section[id]');
+      const targetId = section?.id || 'exam';
+      history.replaceState(null, '', '#' + targetId);
+      showPageByHash();
+      requestAnimationFrame(() => first.scrollIntoView({behavior:'smooth', block:'center'}));
+    }else{
+      showPageByHash();
+      alert('未找到匹配内容');
+    }
+  }
+  function bindToolbar(){
+    document.getElementById('searchBtn').onclick = doSearch;
+    document.getElementById('clearBtn').onclick = resetMain;
+    document.getElementById('themeBtn').onclick = () => {
+      body.classList.toggle('dark');
+      localStorage.setItem('lit-theme', body.classList.contains('dark') ? 'dark' : 'light');
+      document.getElementById('themeBtn').textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    };
+    document.getElementById('menuBtn').onclick = () => body.classList.toggle('nav-open');
+    document.getElementById('searchInput').addEventListener('keydown', e => { if(e.key === 'Enter') doSearch(); });
+    setupSlideFallbacks();
+    if(window.initQuiz) window.initQuiz();
+    document.querySelectorAll('.toc a,.topic-tabs a').forEach(a => a.addEventListener('click', () => body.classList.remove('nav-open')));
+  }
+  function setupSlideFallbacks(){
+    document.querySelectorAll('.slide-card img').forEach(img => {
+      let message = img.nextElementSibling;
+      if(!message || !message.classList.contains('slide-error')){
+        message = document.createElement('p');
+        message.className = 'slide-error';
+        message.textContent = 'Slide image unavailable. Please check assets/key_slides path.';
+        img.insertAdjacentElement('afterend', message);
+      }
+      const showError = () => { img.style.display = 'none'; message.style.display = 'block'; };
+      img.addEventListener('error', showError, {once:true});
+      if(img.complete && img.naturalWidth === 0) showError();
+    });
+  }
+  if(localStorage.getItem('lit-theme') === 'dark') body.classList.add('dark');
+  bindToolbar();
+  document.getElementById('themeBtn').textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+  showPageByHash();
+  window.addEventListener('hashchange', () => showPageByHash({scroll:true}));
+  const topBtn = document.getElementById('backTop');
+  window.addEventListener('scroll', () => topBtn.style.display = scrollY > 600 ? 'block' : 'none');
+  topBtn.onclick = () => scrollTo({top:0, behavior:'smooth'});
 </script>
 <script src="./questions.js"></script>
 <script src="./quiz.js"></script>
