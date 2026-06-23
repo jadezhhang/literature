@@ -3137,6 +3137,339 @@ const QUESTION_BANK = [
     ],
     "answer": "A",
     "explanation": "End rhyme depends on line-end position, while internal rhyme appears within a line or around a caesura."
+  },
+  {
+    "id": "org_001",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "A stanzaic form of poetry is mainly measured by the number of ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "lines"
+      },
+      {
+        "label": "B",
+        "text": "authors"
+      },
+      {
+        "label": "C",
+        "text": "themes"
+      },
+      {
+        "label": "D",
+        "text": "chapters"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Stanza names such as couplet, tercet and quatrain are based mainly on the number of lines."
+  },
+  {
+    "id": "org_002",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "Which term means a four-line stanza?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Couplet"
+      },
+      {
+        "label": "B",
+        "text": "Tercet"
+      },
+      {
+        "label": "C",
+        "text": "Quatrain"
+      },
+      {
+        "label": "D",
+        "text": "Octave"
+      }
+    ],
+    "answer": "C",
+    "explanation": "A quatrain is a four-line stanza."
+  },
+  {
+    "id": "org_003",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "Which rhyme scheme belongs to a Shakespearean sonnet?",
+    "options": [
+      {
+        "label": "A",
+        "text": "abab cdcd efef gg"
+      },
+      {
+        "label": "B",
+        "text": "aa bb cc dd ee ff gg"
+      },
+      {
+        "label": "C",
+        "text": "aba bcb cdc"
+      },
+      {
+        "label": "D",
+        "text": "ababbcbcc"
+      }
+    ],
+    "answer": "A",
+    "explanation": "The Shakespearean or English sonnet commonly uses abab cdcd efef gg."
+  },
+  {
+    "id": "org_004",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "Trochaic tetrameter means ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "four trochaic feet per line"
+      },
+      {
+        "label": "B",
+        "text": "five iambic feet per line"
+      },
+      {
+        "label": "C",
+        "text": "no regular meter"
+      },
+      {
+        "label": "D",
+        "text": "a rhyme scheme of ababbcbcc"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Trochaic = stressed + unstressed; tetrameter = four feet."
+  },
+  {
+    "id": "org_005",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "Blank verse is best defined as ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "unrhymed iambic pentameter"
+      },
+      {
+        "label": "B",
+        "text": "rhymed free verse"
+      },
+      {
+        "label": "C",
+        "text": "a poem without lines"
+      },
+      {
+        "label": "D",
+        "text": "a fourteen-line poem only"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Blank verse has meter, specifically iambic pentameter, but no rhyme."
+  },
+  {
+    "id": "org_006",
+    "type": "truefalse",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "A run-on line or enjambment carries meaning beyond the line ending without a full pause.",
+    "answer": "A",
+    "explanation": "This is the definition of run-on line / enjambment."
+  },
+  {
+    "id": "org_007",
+    "type": "truefalse",
+    "source": "三份材料整理",
+    "topic": "Novel",
+    "question": "Story emphasizes chronological sequence, while plot emphasizes causality.",
+    "answer": "A",
+    "explanation": "Story is time sequence; plot keeps sequence but gives causal relation priority."
+  },
+  {
+    "id": "org_008",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Novel",
+    "question": "A round character is usually ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "complex and multidimensional"
+      },
+      {
+        "label": "B",
+        "text": "one-dimensional and unchanged by definition"
+      },
+      {
+        "label": "C",
+        "text": "always a villain"
+      },
+      {
+        "label": "D",
+        "text": "always the narrator"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Round characters are complex, fully developed, and may surprise readers without losing credibility."
+  },
+  {
+    "id": "org_009",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Novel",
+    "question": "Indirect characterization reveals a character mainly through ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "action, dialogue, behavior and reactions"
+      },
+      {
+        "label": "B",
+        "text": "only the title"
+      },
+      {
+        "label": "C",
+        "text": "only direct authorial explanation"
+      },
+      {
+        "label": "D",
+        "text": "rhyme scheme"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Indirect characterization lets the character reveal themselves through details rather than direct telling."
+  },
+  {
+    "id": "org_010",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Drama",
+    "question": "Which of the following is NOT one of Aristotle’s six elements of drama as listed in the review?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Plot"
+      },
+      {
+        "label": "B",
+        "text": "Character"
+      },
+      {
+        "label": "C",
+        "text": "Music"
+      },
+      {
+        "label": "D",
+        "text": "Rhyme scheme"
+      }
+    ],
+    "answer": "D",
+    "explanation": "The six elements are plot, character, thought, diction, music and spectacle."
+  },
+  {
+    "id": "org_011",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Drama",
+    "question": "A farce mainly aims to ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "make the audience laugh"
+      },
+      {
+        "label": "B",
+        "text": "produce spiritual purgation"
+      },
+      {
+        "label": "C",
+        "text": "analyze capitalist ideology"
+      },
+      {
+        "label": "D",
+        "text": "create a fixed rhyme scheme"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Farce uses exaggerated and improbable situations primarily to make the audience laugh."
+  },
+  {
+    "id": "org_012",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Feminist Criticism",
+    "question": "In feminist criticism, sex refers mainly to ______, while gender refers mainly to ______.",
+    "options": [
+      {
+        "label": "A",
+        "text": "biology; social/cultural roles"
+      },
+      {
+        "label": "B",
+        "text": "rhyme; meter"
+      },
+      {
+        "label": "C",
+        "text": "plot; story"
+      },
+      {
+        "label": "D",
+        "text": "comedy; tragedy"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Sex is biological; gender is culturally and socially constructed."
+  },
+  {
+    "id": "org_013",
+    "type": "truefalse",
+    "source": "三份材料整理",
+    "topic": "Drama",
+    "question": "A problem play discusses social, economic or political issues in a realistic manner.",
+    "answer": "A",
+    "explanation": "Problem play is drama of social criticism that presents problematic issues through debate and realism."
+  },
+  {
+    "id": "org_014",
+    "type": "truefalse",
+    "source": "三份材料整理",
+    "topic": "Poetry",
+    "question": "Free verse must always be completely unrhymed.",
+    "answer": "B",
+    "explanation": "Free verse lacks regular metrical pattern; it may be rhymed or unrhymed."
+  },
+  {
+    "id": "org_015",
+    "type": "multiple",
+    "source": "三份材料整理",
+    "topic": "Literary Terms",
+    "question": "Which pair is most likely to be confused but should be separated by different judging dimensions?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Round/flat and static/dynamic"
+      },
+      {
+        "label": "B",
+        "text": "Author/title and page number"
+      },
+      {
+        "label": "C",
+        "text": "Poetry/prose and punctuation"
+      },
+      {
+        "label": "D",
+        "text": "Novel/drama and font size"
+      }
+    ],
+    "answer": "A",
+    "explanation": "Round/flat concerns complexity; static/dynamic concerns whether the character changes."
   }
 ];
 if (typeof window !== "undefined") window.QUESTION_BANK = QUESTION_BANK;
