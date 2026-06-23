@@ -3471,5 +3471,85 @@ const QUESTION_BANK = [
     "answer": "A",
     "explanation": "Round/flat concerns complexity; static/dynamic concerns whether the character changes."
   }
+,
+  {
+    "id": "fig_001",
+    "type": "multiple",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "“The pen is mightier than the sword” is an example of ______.",
+    "options": [
+      {"label":"A","text":"simile"},
+      {"label":"B","text":"metonymy"},
+      {"label":"C","text":"alliteration"},
+      {"label":"D","text":"enjambment"}
+    ],
+    "answer": "B",
+    "explanation": "Pen stands for writing or ideas, while sword stands for force or war. This is metonymy: using something closely related to stand for the thing meant."
+  },
+  {
+    "id": "fig_002",
+    "type": "multiple",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "“All hands on deck” is an example of ______.",
+    "options": [
+      {"label":"A","text":"synecdoche"},
+      {"label":"B","text":"paradox"},
+      {"label":"C","text":"simile"},
+      {"label":"D","text":"free verse"}
+    ],
+    "answer": "A",
+    "explanation": "Hands, a part of the body, stands for sailors or workers as a whole. This is synecdoche."
+  },
+  {
+    "id": "fig_003",
+    "type": "multiple",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "Which sentence is a simile?",
+    "options": [
+      {"label":"A","text":"Time is a thief."},
+      {"label":"B","text":"Her smile is like the sun."},
+      {"label":"C","text":"The White House issued a statement."},
+      {"label":"D","text":"Less is more."}
+    ],
+    "answer": "B",
+    "explanation": "A simile compares two things using like or as."
+  },
+  {
+    "id": "fig_004",
+    "type": "multiple",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "“Bittersweet” is an example of ______.",
+    "options": [
+      {"label":"A","text":"oxymoron"},
+      {"label":"B","text":"rhyme scheme"},
+      {"label":"C","text":"end-stopped line"},
+      {"label":"D","text":"blank verse"}
+    ],
+    "answer": "A",
+    "explanation": "Oxymoron places two contradictory words together to create a new meaning."
+  },
+  {
+    "id": "fig_005",
+    "type": "truefalse",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "A paradox is an apparently contradictory statement that may contain a deeper truth.",
+    "answer": "A",
+    "explanation": "Examples include “Less is more” and Orwell’s “War is peace.”"
+  },
+  {
+    "id": "fig_006",
+    "type": "truefalse",
+    "source": "Figure of Speech补充",
+    "topic": "Poetry",
+    "question": "Personification gives human qualities or actions to non-human things.",
+    "answer": "A",
+    "explanation": "For example, “The wind whispered” gives a human action to the wind."
+  }
+
 ];
 if (typeof window !== "undefined") window.QUESTION_BANK = QUESTION_BANK;
