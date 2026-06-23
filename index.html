@@ -53,11 +53,12 @@
     .slide-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:16px;margin:16px 0 28px}.slide-card{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}.slide-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#eee;border-bottom:1px solid var(--line)}.slide-card figcaption{padding:14px}.slide-card h4{margin:0 0 7px;color:var(--accent2)}.slide-card p{font-size:13px;margin:4px 0}.slide-card .why{color:var(--muted)}.slide-card .exam-types{margin-top:9px}.slide-card .exam-types span{display:inline-block;margin:2px 3px 2px 0;padding:2px 7px;border-radius:999px;background:var(--question-bg);color:var(--accent);font-size:11px;font-weight:800}.topic-review-block{border-top:1px dashed var(--line);margin-top:24px;padding-top:4px}.practice-list li{margin:7px 0}
     .slide-error{display:none;margin:0!important;padding:9px 12px;background:var(--question-bg);color:var(--accent);font-size:12px!important;font-weight:750;text-align:center;border-bottom:1px solid var(--line)}
     #works article{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:20px;margin:18px 0;box-shadow:var(--shadow)}.keywords{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 15px}.keywords span{background:var(--panel2);border:1px solid var(--line);color:var(--accent2);border-radius:999px;padding:3px 8px;font-size:12px;font-weight:750}.exam-memo{margin-top:16px;border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}.exam-memo summary{color:var(--accent)}.exam-memo p{margin:10px 0}.priority-high{background:var(--high-bg);color:var(--gold)}.priority-secondary{background:var(--mix-bg);color:#6266b5}
+    .quiz-shell{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}.quiz-mode-tabs,.quiz-actions,.quiz-nav{display:flex;flex-wrap:wrap;gap:8px}.quiz-mode-tabs button.active{background:var(--accent);border-color:var(--accent);color:white}.quiz-filters{display:grid;grid-template-columns:minmax(190px,1fr) minmax(220px,2fr);gap:10px;margin:14px 0}.quiz-filters select,.quiz-filters input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text)}.quiz-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin:15px 0}.quiz-stat{background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:10px;text-align:center}.quiz-stat b{display:block;color:var(--accent);font-size:21px}.quiz-card{margin-top:16px;border:1px solid var(--line);border-radius:15px;padding:19px;background:var(--panel2)}.quiz-meta{display:flex;flex-wrap:wrap;gap:7px;align-items:center;color:var(--muted);font-size:12px}.quiz-question{font:700 19px/1.55 Georgia,"Times New Roman",serif;margin:15px 0}.quiz-options{display:grid;gap:9px}.quiz-option{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;background:var(--panel);border:1px solid var(--line);padding:11px 13px;border-radius:11px}.quiz-option:hover{border-color:var(--accent2);color:var(--text)}.quiz-option.selected{border-color:var(--accent2);box-shadow:0 0 0 2px color-mix(in srgb,var(--accent2) 25%,transparent)}.quiz-option.correct{background:var(--work-bg);border-color:#3d8c6b}.quiz-option.wrong{background:var(--question-bg);border-color:var(--accent)}.quiz-option:disabled{cursor:default;color:var(--text)}.quiz-option-label{font-weight:900;color:var(--accent);min-width:22px}.quiz-feedback{display:none;margin-top:14px;padding:13px;border-radius:11px;background:var(--answer-bg)}.quiz-feedback.show{display:block}.quiz-feedback.correct{border-left:5px solid #3d8c6b}.quiz-feedback.wrong{border-left:5px solid var(--accent)}.quiz-card-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.quiz-nav{justify-content:space-between;margin-top:14px}.quiz-empty{text-align:center;padding:35px;color:var(--muted)}.quiz-count{margin-left:auto}.quiz-work{color:var(--accent2);font-weight:800}
     .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:15px 0}.flow span{background:var(--panel2);border:1px solid var(--line);padding:8px 12px;border-radius:10px;font-weight:700}.flow i{color:var(--accent);font-style:normal}
     mark.search-hit{background:#ffdf4d;color:#211b00;border-radius:3px;padding:0 1px}.source{color:var(--muted);font-size:12px}.conflict{border:1px solid var(--accent);background:var(--question-bg);padding:12px;border-radius:11px}
     #backTop{position:fixed;right:22px;bottom:22px;display:none;z-index:30;border-color:var(--accent);font-weight:800}
     .mobile-menu{display:none}.two-col{columns:2;column-gap:28px}.no-break{break-inside:avoid}
-    @media(max-width:900px){.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}}
+    @media(max-width:900px){.layout{display:block}aside{transform:translateX(-105%);transition:.2s}.nav-open aside{transform:none}.mobile-menu{display:inline-block}main{padding:18px 18px 80px}.hero{padding:25px}.work-grid{grid-template-columns:1fr}.two-col{columns:1}.slide-gallery{grid-template-columns:1fr}.quiz-filters{grid-template-columns:1fr}.quiz-stats{grid-template-columns:repeat(2,1fr)}.quiz-nav button{flex:1}}
     @media print{aside,.toolbar,#backTop{display:none!important}.layout{display:block}main{padding:0;max-width:none}.card,details{box-shadow:none;break-inside:avoid}details>div{display:block!important}}
   </style>
 </head>
@@ -73,6 +74,7 @@
       <a href="#terms">Key Literary Terms</a>
       <a href="#shortanswer">Short-answer Questions</a>
       <a href="#essay">Literary Analysis Templates</a>
+      <a href="#practice">Practice Questions 刷题</a>
       <a href="#exam">Exam Overview 题型与策略</a>
       <a href="#works">Key Works 重点作品</a>
       <a href="#comparison">Comparison Questions</a>
@@ -100,7 +102,7 @@
     <nav class="topic-tabs" aria-label="Review topics">
       <a href="#poetry">Poetry</a><a href="#novel">Novel</a><a href="#drama">Drama</a>
       <a href="#feminist">Feminist Criticism</a><a href="#terms">Key Terms</a>
-      <a href="#shortanswer">Short-answer Questions</a><a href="#essay">Literary Analysis Templates</a>
+      <a href="#shortanswer">Short-answer Questions</a><a href="#essay">Literary Analysis Templates</a><a href="#practice">Practice Questions</a>
     </nav>
 
     <section id="exam">
@@ -708,6 +710,48 @@
       </div>
     </section>
 
+    <section id="practice">
+      <h2>Practice Questions｜刷题</h2>
+      <div class="callout high"><b>Question bank：</b><span id="quizBankSummary">正在载入题库…</span>。题目与中文解析来自指定的单选、判断题 DOCX；错题会保存在当前浏览器中。</div>
+      <div class="quiz-shell" id="quizApp">
+        <div class="quiz-mode-tabs" role="tablist" aria-label="Question type filters">
+          <button type="button" data-quiz-mode="all" class="active">All 全部</button>
+          <button type="button" data-quiz-mode="multiple">Multiple Choice 单选</button>
+          <button type="button" data-quiz-mode="truefalse">True or False 判断</button>
+          <button type="button" data-quiz-mode="wrong">Wrong Questions 错题</button>
+          <button type="button" data-quiz-mode="random">Random Practice 随机练习</button>
+        </div>
+        <div class="quiz-filters">
+          <select id="quizTopic" aria-label="Topic filter">
+            <option value="all">All Topics 全部主题</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Novel">Novel</option>
+            <option value="Drama">Drama</option>
+            <option value="Feminist Criticism">Feminist Criticism</option>
+            <option value="Key Works">Key Works</option>
+            <option value="Literary Terms">Literary Terms</option>
+          </select>
+          <input id="quizSearch" type="search" placeholder="搜索题干、选项、解析、主题或作品名">
+        </div>
+        <div class="quiz-stats" aria-label="Practice score">
+          <div class="quiz-stat"><b id="quizAnswered">0</b><span>Answered 已答</span></div>
+          <div class="quiz-stat"><b id="quizCorrect">0</b><span>Correct 正确</span></div>
+          <div class="quiz-stat"><b id="quizWrong">0</b><span>Wrong 错误</span></div>
+          <div class="quiz-stat"><b id="quizAccuracy">0%</b><span>Accuracy 正确率</span></div>
+        </div>
+        <div class="quiz-actions">
+          <button type="button" id="quizShuffle">Shuffle Questions 随机顺序</button>
+          <button type="button" id="quizReset">Reset Practice 重置练习</button>
+          <button type="button" id="quizClearWrong">Clear Wrong Questions 清空错题</button>
+        </div>
+        <div id="quizQuestionArea" aria-live="polite"></div>
+        <div class="quiz-nav">
+          <button type="button" id="quizPrev">← Previous Question 上一题</button>
+          <button type="button" id="quizNext">Next Question 下一题 →</button>
+        </div>
+      </div>
+    </section>
+
     <section id="conflicts">
       <h2>材料冲突与使用说明</h2>
       <div class="table-wrap"><table>
@@ -752,6 +796,7 @@
     document.getElementById('menuBtn').onclick=()=>body.classList.toggle('nav-open');
     document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
     setupSlideFallbacks();
+    if(window.initQuiz)window.initQuiz();
   }
   function setupSlideFallbacks(){
     document.querySelectorAll('.slide-card img').forEach(img=>{
@@ -778,5 +823,7 @@
   document.querySelectorAll('.toc a').forEach(a=>a.addEventListener('click',()=>body.classList.remove('nav-open')));
   const topBtn=document.getElementById('backTop');window.addEventListener('scroll',()=>topBtn.style.display=scrollY>600?'block':'none');topBtn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 </script>
+<script src="assets/questions.js"></script>
+<script src="assets/quiz.js"></script>
 </body>
 </html>
