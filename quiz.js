@@ -49,8 +49,8 @@
     item.question,
     item.topic,
     item.work || "",
-    item.explanation,
-    ...item.options.map((option) => option.text)
+    item.explanation || "",
+    ...(Array.isArray(item.options) ? item.options.map((option) => option.text) : ["True", "False"])
   ].join(" ").toLowerCase();
 
   const baseFiltered = () => {
@@ -111,7 +111,13 @@
     const record = state.answered[item.id];
     const selected = record ? record.selected : state.selected[item.id];
     const typeName = item.type === "multiple" ? "Multiple Choice 单选" : "True or False 判断";
-    const options = item.options.map((option) => {
+    const itemOptions = Array.isArray(item.options) && item.options.length
+      ? item.options
+      : [
+          { label: "A", text: "True" },
+          { label: "B", text: "False" }
+        ];
+    const options = itemOptions.map((option) => {
       const classes = ["quiz-option"];
       if (selected === option.label) classes.push("selected");
       if (record && option.label === item.answer) classes.push("correct");
