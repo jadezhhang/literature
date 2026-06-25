@@ -137,32 +137,23 @@
       </div>
       <div class="quiz-question">${escapeHtml(item.question)}</div>
       <div class="quiz-options">${options}</div>
-      <div class="quiz-card-actions">
-        <button type="button" id="quizCheck" ${selected && !record ? "" : "disabled"}>Check Answer 检查答案</button>
-      </div>
       ${feedback}
     </article>`;
 
     area.querySelectorAll("[data-option]").forEach((button) => {
       button.addEventListener("click", () => {
-        state.selected[item.id] = button.dataset.option;
-        render();
-      });
-    });
-
-    const check = document.getElementById("quizCheck");
-    if (check) {
-      check.addEventListener("click", () => {
-        const choice = state.selected[item.id];
-        if (!choice) return;
+        const choice = button.dataset.option;
+        if (!choice || state.answered[item.id]) return;
         const correct = choice === item.answer;
+        state.selected[item.id] = choice;
         state.answered[item.id] = { selected: choice, correct };
         if (correct) state.wrongIds.delete(item.id);
         else state.wrongIds.add(item.id);
         saveWrong();
         render();
       });
-    }
+    });
+
     updateStats();
   };
 
