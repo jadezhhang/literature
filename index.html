@@ -45,6 +45,14 @@
     th,td{padding:11px 13px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top;text-align:left}th{background:var(--panel2);color:var(--accent2);position:sticky;top:0}
     tr:last-child td{border-bottom:0}td:last-child,th:last-child{border-right:0}.term{font-weight:800;color:var(--accent)}.en{font-family:Georgia,"Times New Roman",serif}
     details{background:var(--panel);border:1px solid var(--line);border-radius:13px;margin:12px 0;box-shadow:var(--shadow)}summary{cursor:pointer;padding:15px 18px;font-weight:800;color:var(--accent2)}
+
+    details.answer-card{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow);overflow:hidden}
+    details.answer-card summary{padding:18px;color:var(--text);font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+    details.answer-card summary::-webkit-details-marker{display:none}
+    details.answer-card summary::after{content:'点击查看答案';font-size:13px;color:var(--muted);font-weight:700;white-space:nowrap}
+    details.answer-card[open] summary::after{content:'点击隐藏答案'}
+    details.answer-card>div{padding:0 18px 18px}
+    details.answer-card p{margin:0}
     details>div{padding:0 18px 18px}.work-title{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.work-title h3{margin-bottom:4px}
     .work-grid{display:grid;grid-template-columns:160px 1fr;gap:8px 16px}.work-grid dt{font-weight:800;color:var(--accent2)}.work-grid dd{margin:0 0 7px}
     .quote{font-family:Georgia,"Times New Roman",serif;background:var(--answer-bg);border-radius:10px;padding:12px 15px;margin:8px 0;color:var(--text)}
@@ -513,19 +521,20 @@
 <div class="callout high"><b>答题公式：</b>X refers to ______, whereas Y refers to ______. The key distinction lies in ______. In literary analysis, this distinction helps us examine ______.</div>
 <h3>A 级：优先背熟</h3>
 <div class="grid">
-<div class="card"><h4>Sex vs Gender</h4><p><b>Sex</b> is biological; <b>gender</b> is social and cultural. Biology determines sex, whereas culture constructs gender roles and expectations.</p></div>
-<div class="card"><h4>Direct vs Indirect Characterization</h4><p><b>Direct</b> characterization tells the reader what a character is like; <b>indirect</b> characterization lets the reader infer personality through speech, action, behavior and reactions.</p></div>
-<div class="card"><h4>Round vs Flat Character</h4><p><b>Round</b> characters are complex and multidimensional; <b>flat</b> characters are one-dimensional and defined by limited traits. 核心维度是 complexity。</p></div>
-<div class="card"><h4>Story vs Plot</h4><p><b>Story</b> is chronological sequence; <b>plot</b> emphasizes causality. “The king died and then the queen died” is story; “of grief” makes it plot.</p></div>
-<div class="card"><h4>Modernism / Modernity / Modernization</h4><p><b>Modernism</b> is an artistic/literary movement; <b>modernity</b> is an ideology or condition rooted in capitalist/Enlightenment thought; <b>modernization</b> is institutional transformation in society, economy, city, industry and education.</p></div>
+<details class="answer-card"><summary>Sex vs Gender</summary><div><p><b>Sex</b> is biological; <b>gender</b> is social and cultural. Biology determines sex, whereas culture constructs gender roles and expectations.</p></div></details>
+<details class="answer-card"><summary>Direct vs Indirect Characterization</summary><div><p><b>Direct</b> characterization tells the reader what a character is like; <b>indirect</b> characterization lets the reader infer personality through speech, action, behavior and reactions.</p></div></details>
+<details class="answer-card"><summary>Round vs Flat Character</summary><div><p><b>Round</b> characters are complex and multidimensional; <b>flat</b> characters are one-dimensional and defined by limited traits. 核心维度是 complexity。</p></div></details>
+<details class="answer-card"><summary>Story vs Plot</summary><div><p><b>Story</b> is chronological sequence; <b>plot</b> emphasizes causality. “The king died and then the queen died” is story; “of grief” makes it plot.</p></div></details>
+<details class="answer-card"><summary>Modernism / Modernity / Modernization</summary><div><p><b>Modernism</b> is an artistic/literary movement; <b>modernity</b> is an ideology or condition rooted in capitalist/Enlightenment thought; <b>modernization</b> is institutional transformation in society, economy, city, industry and education.</p></div></details>
 </div>
 <h3>B 级：概念清楚即可</h3>
 <div class="grid">
-<div class="card"><h4>Blank Verse vs Free Verse</h4><p>Blank verse has meter but no rhyme: unrhymed iambic pentameter. Free verse lacks regular metrical pattern and may be rhymed or unrhymed.</p></div>
-<div class="card"><h4>End-stopped vs Run-on Line</h4><p>End-stopped line completes syntax/meaning at the line ending; run-on line / enjambment carries meaning into the next line. 核心维度是行末是否完成。</p></div>
-<div class="card"><h4>Alliteration / Assonance / Consonance</h4><p>Alliteration = initial consonant; assonance = vowel sound; consonance = consonant sound, especially non-initial or ending consonant in the course examples.</p></div>
-<div class="card"><h4>Tragedy vs Comedy</h4><p>Tragedy deals with serious action, human dignity and purgation through pity/fear; comedy ends happily and exposes human follies in social life.</p></div>
-<div class="card"><h4>Melodrama vs Farce</h4><p>Melodrama gives a thrill through sensational emotion; farce gives a laugh through exaggerated, improbable situations.</p></div>
+<details class="answer-card"><summary>Blank Verse vs Free Verse</summary><div><p>Blank verse has meter but no rhyme: unrhymed iambic pentameter. Free verse lacks regular metrical pattern and may be rhymed or unrhymed.</p></div></details>
+<details class="answer-card"><summary>End-stopped vs Run-on Line</summary><div><p>End-stopped line completes syntax/meaning at the line ending; run-on line / enjambment carries meaning into the next line. 核心维度是行末是否完成。</p></div></details>
+<details class="answer-card"><summary>Tone vs Diction</summary><div><p><b>Tone</b> is the writer’s attitude toward the subject, characters or audience; <b>diction</b> is the writer’s choice and arrangement of words. In short, tone is attitude, while diction is word choice used to create meaning and tone.</p></div></details>
+<details class="answer-card"><summary>Alliteration / Assonance / Consonance</summary><div><p>Alliteration = initial consonant; assonance = vowel sound; consonance = consonant sound, especially non-initial or ending consonant in the course examples.</p></div></details>
+<details class="answer-card"><summary>Tragedy vs Comedy</summary><div><p>Tragedy deals with serious action, human dignity and purgation through pity/fear; comedy ends happily and exposes human follies in social life.</p></div></details>
+<details class="answer-card"><summary>Melodrama vs Farce</summary><div><p>Melodrama gives a thrill through sensational emotion; farce gives a laugh through exaggerated, improbable situations.</p></div></details>
 </div>
 </section>
 <section id="shortanswer">
