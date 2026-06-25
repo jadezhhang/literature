@@ -57,7 +57,7 @@ const QUESTION_BANK = [
     "id": "mc_003",
     "type": "multiple",
     "source": "单选",
-    "topic": "Literary Terms",
+    "topic": "Poetry",
     "question": "\"The pen is mightier than the sword\" is an example of ______.",
     "options": [
       {
@@ -321,10 +321,37 @@ const QUESTION_BANK = [
       }
     ],
     "answer": "C",
-    "explanation": "自由诗（free verse）是指没有规则的韵律或押韵模式的诗歌形式，作者可以自由地选择行的长度和节奏。因此，正确答案是(C) 没有规则的韵律或押韵模式。 • ______ refers to the repetition of initial consonant sounds in a line of poetry. (A) Assonance (B) Alliteration (C) Consonance (D) Onomatopoeia 解析： 头韵（Alliteration）是指在诗行中重复初始辅音的现象，通常用于增加节奏感和强调。因此，正确答案是(B) 头韵。"
+    "explanation": "自由诗（free verse）是指没有规则的韵律或押韵模式的诗歌形式，作者可以自由地选择行的长度和节奏。因此，正确答案是(C) 没有规则的韵律或押韵模式。"
   },
   {
     "id": "mc_013",
+    "type": "multiple",
+    "source": "单选",
+    "topic": "Poetry",
+    "question": "______ refers to the repetition of initial consonant sounds in a line of poetry.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Assonance"
+      },
+      {
+        "label": "B",
+        "text": "Alliteration"
+      },
+      {
+        "label": "C",
+        "text": "Consonance"
+      },
+      {
+        "label": "D",
+        "text": "Onomatopoeia"
+      }
+    ],
+    "answer": "B",
+    "explanation": "头韵（Alliteration）是指在诗行中重复初始辅音的现象，通常用于增加节奏感和强调。因此，正确答案是(B) 头韵。"
+  },
+  {
+    "id": "mc_014",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -351,7 +378,7 @@ const QUESTION_BANK = [
     "explanation": "意识流（stream of consciousness）是一种叙述技巧，通过呈现角色的思维和情感流动，来反映角色的内心世界。因此，正确答案是(A) 展示角色的思维和情感如同发生时一样。"
   },
   {
-    "id": "mc_014",
+    "id": "mc_015",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -378,7 +405,7 @@ const QUESTION_BANK = [
     "explanation": "拟人（Personification）是赋予非人类实体以人类特征的修辞手法，使其看起来像人一样。因此，正确答案是(C) 拟人。"
   },
   {
-    "id": "mc_015",
+    "id": "mc_016",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -405,7 +432,7 @@ const QUESTION_BANK = [
     "explanation": "隐喻（Metaphor）是一种直接比较两个无关事物的方法，不使用“like”或“as”。因此，正确答案是(C) a direct comparison between two unrelated things。"
   },
   {
-    "id": "mc_016",
+    "id": "mc_017",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -432,7 +459,7 @@ const QUESTION_BANK = [
     "explanation": "史诗（Epic）是一种长篇叙事诗，描述文化英雄的冒险经历。因此，正确答案是(C) epic。"
   },
   {
-    "id": "mc_017",
+    "id": "mc_018",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -459,7 +486,7 @@ const QUESTION_BANK = [
     "explanation": "马克思主义批评（Marxist criticism）主要分析文学作品如何反映阶级斗争和社会权力动态。因此，正确答案是(B) reflects class struggles and societal power dynamics。"
   },
   {
-    "id": "mc_018",
+    "id": "mc_019",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -486,7 +513,7 @@ const QUESTION_BANK = [
     "explanation": "扁平角色（Flat character）指的是在整个故事中没有变化且常常是刻板印象的角色。因此，正确答案是(C) flat character。"
   },
   {
-    "id": "mc_019",
+    "id": "mc_020",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -513,7 +540,7 @@ const QUESTION_BANK = [
     "explanation": "素体诗（Blank verse）指的是不押韵的抑扬格五音步，因此，正确答案是(A) unrhymed iambic pentameter。"
   },
   {
-    "id": "mc_020",
+    "id": "mc_021",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -540,7 +567,7 @@ const QUESTION_BANK = [
     "explanation": "意识流（Stream of consciousness）主要与现代主义（Modernism）文学技巧相关，强调呈现人物的内心思想和感受。因此，正确答案是(C) Modernism。"
   },
   {
-    "id": "mc_021",
+    "id": "mc_022",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -564,10 +591,10 @@ const QUESTION_BANK = [
       }
     ],
     "answer": "B",
-    "explanation": "十九行诗（Villanelle）是一种严格的诗歌形式，由十九行组成，并具有特定的押韵模式。A选项sestina是六行诗， D选项quatrain是四行诗。因此，正确答案是(B) villanelle。"
+    "explanation": "十九行诗（Villanelle）是一种严格的诗歌形式，由十九行组成，并具有特定的押韵模式。A选项sestina是六行诗，\tD选项quatrain是四行诗。因此，正确答案是(B) villanelle。"
   },
   {
-    "id": "mc_022",
+    "id": "mc_023",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -594,7 +621,7 @@ const QUESTION_BANK = [
     "explanation": "矛盾修饰法（Oxymoron）是一种修辞手法，其中互相矛盾的词语同时出现以产生新的意义。因此，正确答案是(A) a figure of speech where contradictory terms appear together。"
   },
   {
-    "id": "mc_023",
+    "id": "mc_024",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -621,7 +648,7 @@ const QUESTION_BANK = [
     "explanation": "“生存还是毁灭”是莎士比亚《哈姆雷特》中的一个著名内心独白（Soliloquy），角色自言自语表达内心冲突。因此，正确答案是(B) soliloquy。 注意：Monologue：通常指的是一个角色对着另一个角色或观众发表的讲话，这种讲话在表达时一定有一个明确的对象，即其他角色或观众。Monologue是戏剧中常见的表现形式，其中一个角色向另一个角色或观众倾诉内心或表达观点。 Soliloquy：则更倾向于没有对象的说话，也就是我们通常说的自言自语。Soliloquy通常指的是一个人独自一时的内心独白，没有直接的对话对象，是角色在内心深处对自己的思考和表达。"
   },
   {
-    "id": "mc_024",
+    "id": "mc_025",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -648,7 +675,7 @@ const QUESTION_BANK = [
     "explanation": "叙述者（Narrator）是讲述故事的人，可以有不同程度的知识和参与。因此，正确答案是(C) narrator。"
   },
   {
-    "id": "mc_025",
+    "id": "mc_026",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -675,7 +702,7 @@ const QUESTION_BANK = [
     "explanation": "头韵（Alliteration）是指在诗行中重复初始辅音的现象，通常用于增加节奏感和强调。因此，正确答案是(B) consonant。"
   },
   {
-    "id": "mc_026",
+    "id": "mc_027",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -702,7 +729,7 @@ const QUESTION_BANK = [
     "explanation": "动态角色（Dynamic character）是指在故事中经历重大变化的角色，因此，正确答案是(C) dynamic character。"
   },
   {
-    "id": "mc_027",
+    "id": "mc_028",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -729,7 +756,7 @@ const QUESTION_BANK = [
     "explanation": "莎士比亚十四行诗（Shakespearean sonnet）的典型押韵模式是abab cdcd efef gg，因此，正确答案是(B) Shakespearean sonnet。"
   },
   {
-    "id": "mc_028",
+    "id": "mc_029",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -756,7 +783,7 @@ const QUESTION_BANK = [
     "explanation": "故事（Story）是指事件的时间顺序排列，强调发生的事件及其顺序，因此，正确答案是(C) Story。"
   },
   {
-    "id": "mc_029",
+    "id": "mc_030",
     "type": "multiple",
     "source": "单选",
     "topic": "Drama",
@@ -783,7 +810,7 @@ const QUESTION_BANK = [
     "explanation": "情节剧（Melodrama）指的是充满夸张人物和激动人心事件的戏剧，旨在吸引观众的情感，因此，正确答案是(B) Melodrama。"
   },
   {
-    "id": "mc_030",
+    "id": "mc_031",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -810,7 +837,7 @@ const QUESTION_BANK = [
     "explanation": "戏剧独白（Dramatic monologue）是一种诗歌形式，其中单个角色对一个沉默的听众说话，因此，正确答案是(B) a poem where a single character speaks to a silent listener。"
   },
   {
-    "id": "mc_031",
+    "id": "mc_032",
     "type": "multiple",
     "source": "单选",
     "topic": "Feminist Criticism",
@@ -837,7 +864,7 @@ const QUESTION_BANK = [
     "explanation": "女性主义批评（Feminist criticism）的主要目的是分析文学作品如何加强或削弱对女性的压迫，因此，正确答案是(C) examine how literature reinforces or undermines the oppression of women。"
   },
   {
-    "id": "mc_032",
+    "id": "mc_033",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -864,7 +891,7 @@ const QUESTION_BANK = [
     "explanation": "圆形角色（Round character）是指在叙述中被充分发展且复杂的角色，因此，正确答案是(C) round。"
   },
   {
-    "id": "mc_033",
+    "id": "mc_034",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -891,7 +918,7 @@ const QUESTION_BANK = [
     "explanation": "人物塑造（Characterization）是通过描述角色的行动、言语和外貌来刻画角色的手法。因此，正确答案是(B) Characterization。"
   },
   {
-    "id": "mc_034",
+    "id": "mc_035",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -918,7 +945,7 @@ const QUESTION_BANK = [
     "explanation": "全韵（Full rhyme）是指重读元音及其后所有的声音都相同的押韵形式。因此，正确答案是(C) Full rhyme。"
   },
   {
-    "id": "mc_035",
+    "id": "mc_036",
     "type": "multiple",
     "source": "单选",
     "topic": "Drama",
@@ -945,7 +972,7 @@ const QUESTION_BANK = [
     "explanation": "问题剧（Problem play）的主要目的是探讨社会、经济或政治问题，因此，正确答案是(B) explore social, economic, or political issues。"
   },
   {
-    "id": "mc_036",
+    "id": "mc_037",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -972,7 +999,7 @@ const QUESTION_BANK = [
     "explanation": "警句（Epigram）是一种简短而机智的诗或言论，通常包含一个令人意外的转折。因此，正确答案是(C) Epigram。"
   },
   {
-    "id": "mc_037",
+    "id": "mc_038",
     "type": "multiple",
     "source": "单选",
     "topic": "Novel",
@@ -999,7 +1026,7 @@ const QUESTION_BANK = [
     "explanation": "第一人称叙述（First-person narration）是指故事由故事中的一个角色作为叙述者来讲述，因此，正确答案是(A) First-person narration。"
   },
   {
-    "id": "mc_038",
+    "id": "mc_039",
     "type": "multiple",
     "source": "单选",
     "topic": "Literary Terms",
@@ -1026,7 +1053,7 @@ const QUESTION_BANK = [
     "explanation": "转喻（Metonymy）是指用一个相关的物体来代表实际谈论的事物。因此，正确答案是(C) using a related object to stand in for the thing actually being talked about。"
   },
   {
-    "id": "mc_039",
+    "id": "mc_040",
     "type": "multiple",
     "source": "单选",
     "topic": "Poetry",
@@ -1053,11 +1080,10 @@ const QUESTION_BANK = [
     "explanation": "叙事诗（Narrative）是指讲述故事的诗歌，通常带有英雄主题。因此，正确答案是(B) Narrative。"
   },
   {
-    "id": "mc_040",
+    "id": "mc_041",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The poem \"London\" by William Blake is structured into ______.",
     "options": [
       {
@@ -1081,11 +1107,10 @@ const QUESTION_BANK = [
     "explanation": "威廉·布莱克的诗《伦敦》由四节组成，每节四行。因此，正确答案是(B) four stanzas of four lines each。"
   },
   {
-    "id": "mc_041",
+    "id": "mc_042",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The rhyme scheme followed in \"London\" is ______.",
     "options": [
       {
@@ -1109,11 +1134,10 @@ const QUESTION_BANK = [
     "explanation": "整首诗《伦敦》的押韵模式是ABAB。因此，正确答案是(A) ABAB throughout the poem。"
   },
   {
-    "id": "mc_042",
+    "id": "mc_043",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The primary theme of \"London\" by William Blake is ______.",
     "options": [
       {
@@ -1137,11 +1161,10 @@ const QUESTION_BANK = [
     "explanation": "威廉·布莱克的《伦敦》的主要主题是城市生活中的痛苦和悲惨。因此，正确答案是(B) the suffering and misery in urban life。"
   },
   {
-    "id": "mc_043",
+    "id": "mc_044",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The meter predominantly used in \"London\" is ______.",
     "options": [
       {
@@ -1165,11 +1188,10 @@ const QUESTION_BANK = [
     "explanation": "《伦敦》中主要使用的格律是抑扬四音步（iambic tetrameter），但有时会有变体。因此，正确答案是(C) iambic tetrameter。 注意：《西班牙修道院独白》使用的是扬抑四音步（trochaic tetrameter）。"
   },
   {
-    "id": "mc_044",
+    "id": "mc_045",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "\"Soliloquy of the Spanish Cloister\" by Robert Browning is written in ______.",
     "options": [
       {
@@ -1193,11 +1215,10 @@ const QUESTION_BANK = [
     "explanation": "《西班牙修道院独白》使用的是扬抑四音步（trochaic tetrameter），但有时会有变体。因此，正确答案是(B) trochaic tetrameter。"
   },
   {
-    "id": "mc_045",
+    "id": "mc_046",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "In \"London,\" the line \"Marks of weakness, marks of woe\" employs ______.",
     "options": [
       {
@@ -1221,11 +1242,10 @@ const QUESTION_BANK = [
     "explanation": "诗行“Marks of weakness, marks of woe”使用了音顿（caesura），即诗行中的停顿。因此，正确答案是(A) caesura。 Caesura（音韵停顿）是一种诗歌技巧，指的是诗行中间的自然停顿或间隔，通常由标点符号（如逗号、句号、破折号）或语法结构引起。这种停顿可以打破诗行的节奏，强调某些词语或短语，并增加诗歌的表达效果和复杂性。 如莎士比亚的《十四行诗》：To be, or not to be—that is the question."
   },
   {
-    "id": "mc_046",
+    "id": "mc_047",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The speaker in \"London\" is ______.",
     "options": [
       {
@@ -1249,11 +1269,10 @@ const QUESTION_BANK = [
     "explanation": "《伦敦》中的叙述者是一个对城市现状感到失望的观察者。因此，正确答案是(C) a disillusioned observer。"
   },
   {
-    "id": "mc_047",
+    "id": "mc_048",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "The poem \"Sonnet 130\" by William Shakespeare satirizes the tradition of ______.",
     "options": [
       {
@@ -1277,11 +1296,10 @@ const QUESTION_BANK = [
     "explanation": "莎士比亚的《第130号十四行诗》讽刺了用夸张的比较来理想化情人美丽的传统。因此，正确答案是(A) idealizing the beauty of one's lover with exaggerated comparisons。"
   },
   {
-    "id": "mc_048",
+    "id": "mc_049",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "In \"Sonnet 130,\" the speaker concludes that his love for his mistress is ______.",
     "options": [
       {
@@ -1305,11 +1323,10 @@ const QUESTION_BANK = [
     "explanation": "在《第130号十四行诗》中，叙述者总结他对情妇的爱是真实的，并不依赖于不切实际的比较。因此，正确答案是(C) genuine and not dependent on unrealistic comparisons。"
   },
   {
-    "id": "mc_049",
+    "id": "mc_050",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "\"Sonnet 130\" follows the rhyme scheme of ______.",
     "options": [
       {
@@ -1333,11 +1350,10 @@ const QUESTION_BANK = [
     "explanation": "《第130号十四行诗》的押韵模式是ABABCDCDEFEFGG。因此，正确答案是(A) ABABCDCDEFEFGG。"
   },
   {
-    "id": "mc_050",
+    "id": "mc_051",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "The rhyme scheme of \"Soliloquy of the Spanish Cloister\" is ______.",
     "options": [
       {
@@ -1361,11 +1377,10 @@ const QUESTION_BANK = [
     "explanation": "《西班牙修道院独白》的押韵模式是ABABCDCD。因此，正确答案是(B) ABABCDCD。"
   },
   {
-    "id": "mc_051",
+    "id": "mc_052",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "The tone of \"Sonnet 130\" can best be described as ______.",
     "options": [
       {
@@ -1389,11 +1404,10 @@ const QUESTION_BANK = [
     "explanation": "《第130号十四行诗》的语气可以描述为现实和充满感情。因此，正确答案是(C) realistic and affectionate。"
   },
   {
-    "id": "mc_052",
+    "id": "mc_053",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The primary theme explored in \"London\" by William Blake is ______.",
     "options": [
       {
@@ -1417,11 +1431,10 @@ const QUESTION_BANK = [
     "explanation": "威廉·布莱克的《伦敦》主要探讨的是伦敦的痛苦和压迫。因此，正确答案是(C) the misery and oppression in London。"
   },
   {
-    "id": "mc_053",
+    "id": "mc_054",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "The speaker in \"Sonnet 130\" concludes that his love for his mistress is ______.",
     "options": [
       {
@@ -1445,11 +1458,10 @@ const QUESTION_BANK = [
     "explanation": "在《第130号十四行诗》中，叙述者总结他对情妇的爱是真实的，并不依赖于不切实际的比较。因此，正确答案是(B) genuine and not dependent on unrealistic comparisons。"
   },
   {
-    "id": "mc_054",
+    "id": "mc_055",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "In \"London,\" the use of the term \"chartered\" in the first stanza suggests that the streets are ______.",
     "options": [
       {
@@ -1473,11 +1485,10 @@ const QUESTION_BANK = [
     "explanation": "在《伦敦》的第一节中使用“chartered”一词，表明街道是受到控制和管理的。因此，正确答案是(B) regulated and controlled。"
   },
   {
-    "id": "mc_055",
+    "id": "mc_056",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "The poem \"Sonnet 130\" mocks the tradition of ______.",
     "options": [
       {
@@ -1501,11 +1512,10 @@ const QUESTION_BANK = [
     "explanation": "莎士比亚的《第130号十四行诗》讽刺了用夸张的比较来理想化情人美丽的传统。因此，正确答案是(B) idealizing a lover's beauty with exaggerated comparisons。"
   },
   {
-    "id": "mc_056",
+    "id": "mc_057",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "In \"Soliloquy of the Spanish Cloister,\" the speaker's primary emotion is ______.",
     "options": [
       {
@@ -1529,11 +1539,10 @@ const QUESTION_BANK = [
     "explanation": "《西班牙修道院独白》的叙述者的主要情感是嫉妒。因此，正确答案是(B) jealousy。"
   },
   {
-    "id": "mc_057",
+    "id": "mc_058",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "The setting of \"Trifles\" by Susan Glaspell is primarily in ______.",
     "options": [
       {
@@ -1557,11 +1566,10 @@ const QUESTION_BANK = [
     "explanation": "苏珊·格拉斯佩尔的《琐事》的主要背景设定在一个农村农舍的厨房。因此，正确答案是(C) a kitchen in a rural farmhouse。"
   },
   {
-    "id": "mc_058",
+    "id": "mc_059",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "The poem \"London\" uses which literary device to emphasize the prevalence of the horrors the speaker describes?",
     "options": [
       {
@@ -1585,11 +1593,10 @@ const QUESTION_BANK = [
     "explanation": "威廉·布莱克的《伦敦》使用跨行连续（enjambment）来强调叙述者描述的恐怖的普遍存在。因此，正确答案是(A) Enjambment。"
   },
   {
-    "id": "mc_059",
+    "id": "mc_060",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "\"Trifles\" explores themes of ______.",
     "options": [
       {
@@ -1613,11 +1620,10 @@ const QUESTION_BANK = [
     "explanation": "《琐事》探讨了性别角色和社会期望的主题。因此，正确答案是(C) gender roles and social expectations。"
   },
   {
-    "id": "mc_060",
+    "id": "mc_061",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "The primary conflict in \"Trifles\" revolves around ______.",
     "options": [
       {
@@ -1641,11 +1647,10 @@ const QUESTION_BANK = [
     "explanation": "《琐事》的主要冲突围绕谋杀案的调查展开。因此，正确答案是(C) the investigation of a murder。"
   },
   {
-    "id": "mc_061",
+    "id": "mc_062",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "The central theme of \"Soliloquy of the Spanish Cloister\" is ______.",
     "options": [
       {
@@ -1669,11 +1674,10 @@ const QUESTION_BANK = [
     "explanation": "《西班牙修道院独白》的中心主题是道德虚伪。因此，正确答案是(C) moral hypocrisy。"
   },
   {
-    "id": "mc_062",
+    "id": "mc_063",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "The speaker in \"Sonnet 130\" by William Shakespeare concludes that his mistress is ______.",
     "options": [
       {
@@ -1697,11 +1701,10 @@ const QUESTION_BANK = [
     "explanation": "在《第130号十四行诗》中，叙述者最终得出结论，即使他的情妇不能与传统爱情诗中的典型意象相提并论，但他的爱依然真实且有价值。因此，正确答案是(A) not as beautiful as traditional comparisons suggest。"
   },
   {
-    "id": "mc_063",
+    "id": "mc_064",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "London",
     "question": "\"London\" by William Blake uses the term \"chartered\" to describe the streets and river, suggesting that they are ______.",
     "options": [
       {
@@ -1725,11 +1728,10 @@ const QUESTION_BANK = [
     "explanation": "威廉·布莱克的《伦敦》中使用“chartered”一词，表明街道和河流是受到控制和管理的。因此，正确答案是(B) mapped out and regulated。"
   },
   {
-    "id": "mc_064",
+    "id": "mc_065",
     "type": "multiple",
     "source": "单选",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "In \"Trifles,\" the women discover the key evidence that explains the motive for the crime, which is ______.",
     "options": [
       {
@@ -1758,16 +1760,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "A Shakespearean sonnet consists of three quatrains and a final rhymed couplet.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "莎士比亚十四行诗由三个四行诗节和最后一个押韵的两行诗节组成。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1777,16 +1769,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "Blank verse is a type of poetry that has a regular meter but no rhyme.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "素体诗是一种具有规则韵律但没有押韵的诗歌形式。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1796,16 +1778,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "A dynamic character is one that does not undergo significant change throughout the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "动态角色是指在故事中经历重大变化的角色。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1815,16 +1787,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "An epigram is a long narrative poem that recounts the exploits of its main character.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "警句是一种简短而机智的诗或言论，通常包含一个令人意外的转折。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1834,16 +1796,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "In literature, \"theme\" refers to the central idea or underlying message of a work.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "在文学中，“主题”指的是作品的中心思想或潜在信息。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1853,16 +1805,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "Free verse is poetry that adheres to a strict meter and rhyme scheme.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "自由诗是指没有规则韵律或押韵模式的诗歌形式。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1872,16 +1814,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "The primary purpose of an elegy is to praise a person's accomplishments.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "挽歌的主要目的是表达对逝者的哀悼和怀念，而不是赞美其成就。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1891,16 +1823,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "In a first-person narrative, the story is told from the perspective of a character within the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "第一人称叙述是由故事中的一个角色视角来讲述的。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1910,16 +1832,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "An oxymoron is a figure of speech that combines contradictory terms.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "矛盾修饰法是一种将互相矛盾的词语结合在一起的修辞手法。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1929,16 +1841,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Drama",
     "question": "A protagonist is always the hero of the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "主角不一定总是故事中的英雄，他们可能只是主要角色。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1948,16 +1850,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "Stream of consciousness is a narrative technique that captures the flow of thoughts and feelings as they occur.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "意识流是一种捕捉思维和情感流动的叙述技巧。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -1967,16 +1859,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "Consonance is the repetition of vowel sounds in a line of poetry.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "谐辅韵是指在诗行中重复辅音，而不是元音。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -1986,16 +1868,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Drama",
     "question": "A foil is a character who contrasts with another character, usually the protagonist, to highlight particular qualities.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "陪衬人物是通过与另一角色形成对比来突出后者特质的角色。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2005,16 +1877,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "An allegory is a story in which characters, events, and settings represent abstract qualities or ideas.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "寓言是一种通过角色、事件和环境来代表抽象品质或思想的故事。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2024,16 +1886,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "A hyperbole is a figure of speech that uses extreme exaggeration to make a point.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "夸张（Hyperbole）是一种使用极度夸张来强调观点的修辞手法。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2043,16 +1895,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Drama",
     "question": "An antagonist is a character who opposes the protagonist and creates conflict in the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "反派（Antagonist）是指与主角对立并在故事中制造冲突的角色。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2062,16 +1904,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "A static character is one who undergoes significant development or change throughout the story.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "静态角色（Static character）是指在故事中没有经历重大变化或发展的角色。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2081,16 +1913,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "The term \"diction\" refers to the choice and use of words in speech or writing.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "措辞（Diction）指的是在演讲或写作中选择和使用词语的方式。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2100,16 +1922,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "A narrative poem is a poem that expresses the thoughts and feelings of the poet.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "叙事诗（Narrative poem）是讲述故事的诗，而不是表达诗人思想和感受的诗。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2119,16 +1931,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "A symbol is a literary device that represents something beyond its literal meaning.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "象征（Symbol）是一种代表其字面意义之外的事物的文学手法。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2138,16 +1940,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "An ode is a type of lyrical poem that addresses and often praises a person, place, thing, or idea.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "颂歌（Ode）是一种抒情诗，通常赞美某人、某地、某物或某个思想。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2157,16 +1949,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "Irony is a literary device where the intended meaning is opposite to the literal meaning.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "反讽（Irony）是一种表达的意图与字面意义相反的文学手法。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2176,16 +1958,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "The term \"trochee\" refers to a metrical foot consisting of a stressed syllable followed by an unstressed syllable.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "扬抑格（Trochee）是指由一个重读音节后跟一个不重读音节组成的音步。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2195,16 +1967,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "The term \"assonance\" refers to the repetition of vowel sounds in a line of poetry.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "谐元韵（Assonance）是指在诗行中重复元音的现象。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2214,16 +1976,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "A parody is a work that imitates the style of another work for comic effect or ridicule.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "仿拟（Parody）是一种模仿另一作品风格以达到喜剧效果或讽刺目的的作品。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2233,16 +1985,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "An epic is a long narrative poem that celebrates heroic deeds and legendary events.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "史诗（Epic）是一种长篇叙事诗，庆祝英雄事迹和传奇事件。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2252,16 +1994,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Poetry",
     "question": "A sonnet always follows the rhyme scheme of abbaabba cdecde.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "并非所有十四行诗都遵循abbaabba cdecde的押韵模式，这是彼得拉克十四行诗的押韵模式，但莎士比亚十四行诗则遵循不同的押韵模式（abab cdcd efef gg）。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2271,16 +2003,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Drama",
     "question": "Dramatic irony occurs when the audience knows something that the characters do not.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "戏剧性反讽（Dramatic irony）指的是观众知道一些角色不知道的事情。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2290,16 +2012,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "A metaphor directly compares two unlike things using the words \"like\" or \"as.\"",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "隐喻（Metaphor）是直接比较两个不同事物，而不使用“like”或“as”这些词，这是明喻（Simile）的特点。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2309,16 +2021,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "An unreliable narrator is a narrator whose credibility has been seriously compromised.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "不可靠叙述者（Unreliable narrator）是指其可信度受到严重质疑的叙述者。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2328,16 +2030,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Literary Terms",
     "question": "A paradox is a statement that seems contradictory but actually reveals a truth.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "悖论（Paradox）是指看似矛盾但实际上揭示了真理的陈述。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2347,16 +2039,6 @@ const QUESTION_BANK = [
     "source": "判断",
     "topic": "Novel",
     "question": "A ballad is a type of narrative poem that is meant to be sung.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "民谣（Ballad）是一种叙事诗，通常是用来歌唱的。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2365,18 +2047,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "\"London\" by William Blake is a four-stanza poem with each stanza consisting of four lines.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《伦敦》（London）是威廉·布莱克（William Blake）创作的一首四节诗，每节有四行。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2385,18 +2056,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "In \"London,\" the rhyme scheme of the poem is ABAB throughout.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《伦敦》的押韵模式在整首诗中是ABAB。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2405,18 +2065,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "The poem \"London\" only uses a regular meter known as iambic pentameter.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "《伦敦》使用的是抑扬格五音步（iambic pentameter），但并不是所有行都是抑扬格五音步，有些行如第四行使用了头韵的变体。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2425,18 +2074,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "The speaker in \"London\" describes both the sights and sounds of the city.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "诗中的叙述者描述了伦敦的景象和声音。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2445,18 +2083,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "\"Sonnet 130\" by William Shakespeare mocks the exaggerated comparisons typically found in love poetry.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "莎士比亚的《第130号十四行诗》讽刺了爱情诗中常见的夸张比较。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2465,18 +2092,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "In \"Sonnet 130,\" the speaker claims his mistress is as beautiful as a goddess.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "在《第130号十四行诗》中，叙述者声称他的情妇并不像女神那样美丽。相反，他承认她的缺点。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2485,18 +2101,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "The theme of \"Soliloquy of the Spanish Cloister\" includes moral hypocrisy.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《西班牙修道院独白》的主题包括道德虚伪。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2505,18 +2110,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "In the play \"Trifles,\" the men discover the key evidence to solve the crime.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "在戏剧《琐事》中，女性通过注意到被男性忽视的琐事发现了关键证据。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2525,18 +2119,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "\"Trifles\" explores themes of gender roles and social expectations.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《琐事》探讨了性别角色和社会期望的主题。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2545,18 +2128,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "The rhyme scheme of \"Soliloquy of the Spanish Cloister\" is ABABCDCD throughout the poem.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《西班牙修道院独白》的押韵模式在整个诗中是ABABCDCD。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2565,18 +2137,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "\"Soliloquy of the Spanish Cloister\" is written in trochaic tetrameter.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《西班牙修道院独白》是用抑扬四音步（trochaic tetrameter）写成的。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2585,18 +2146,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "\"Trifles\" primarily explores themes of gender roles and social expectations.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《琐事》主要探讨性别角色和社会期望的主题。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2605,18 +2155,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "\"Soliloquy of the Spanish Cloister\" is set in an anonymous monastery.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《西班牙修道院独白》的背景设定在一个不知名的修道院中。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2625,18 +2164,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "The primary theme of \"Soliloquy of the Spanish Cloister\" is moral integrity.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "《西班牙修道院独白》的主要主题是道德虚伪，而不是道德正直。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2645,18 +2173,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "\"London\" by William Blake reflects the author's disillusionment with the suffering he saw in the city.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "威廉·布莱克的《伦敦》反映了作者对城市中所见的苦难的失望。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2665,18 +2182,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "The poem \"London\" uses enjambment to create a sense of continuity and flow.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "诗歌《伦敦》使用跨行连续（enjambment）来创造连贯和流动的感觉。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2685,18 +2191,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "London",
     "question": "In \"London,\" the speaker describes the Thames River as free and uncontrolled.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "在《伦敦》中，叙述者将泰晤士河描述为被控制的，而不是自由的。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2705,18 +2200,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Soliloquy of the Spanish Cloister",
     "question": "\"Soliloquy of the Spanish Cloister\" features a speaker who openly admires Brother Lawrence.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "《西班牙修道院独白》的叙述者公开谴责而不是钦佩劳伦斯修士。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2725,18 +2209,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "The title \"Trifles\" refers to the small, seemingly unimportant details that the women focus on, which ultimately lead to solving the case.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《琐事》的标题指的是女性关注的小而看似不重要的细节，这些细节最终揭示了案件的真相。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2745,18 +2218,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Trifles",
     "question": "The setting of \"Trifles\" is a cluttered and cold farmhouse kitchen.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《琐事》的背景设定在一个凌乱且寒冷的农舍厨房中。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -2765,18 +2227,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "In \"Sonnet 130,\" Shakespeare's speaker idealizes the beauty of his mistress using exaggerated comparisons.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "B",
     "explanation": "在《第130号十四行诗》中，莎士比亚的叙述者没有用夸张的比较来理想化情妇的美丽，而是反其道而行之。因此，这个陈述是错误的。正确答案是(B) False。"
   },
@@ -2785,18 +2236,7 @@ const QUESTION_BANK = [
     "type": "truefalse",
     "source": "判断",
     "topic": "Key Works",
-    "work": "Sonnet 130",
     "question": "\"Sonnet 130\" follows the rhyme scheme of ABABCDCDEFEFGG.",
-    "options": [
-      {
-        "label": "A",
-        "text": "True"
-      },
-      {
-        "label": "B",
-        "text": "False"
-      }
-    ],
     "answer": "A",
     "explanation": "《第130号十四行诗》的押韵模式是ABABCDCDEFEFGG。因此，这个陈述是正确的。正确答案是(A) True。"
   },
@@ -3470,8 +2910,7 @@ const QUESTION_BANK = [
     ],
     "answer": "A",
     "explanation": "Round/flat concerns complexity; static/dynamic concerns whether the character changes."
-  }
-,
+  },
   {
     "id": "fig_001",
     "type": "multiple",
@@ -3479,10 +2918,22 @@ const QUESTION_BANK = [
     "topic": "Poetry",
     "question": "“The pen is mightier than the sword” is an example of ______.",
     "options": [
-      {"label":"A","text":"simile"},
-      {"label":"B","text":"metonymy"},
-      {"label":"C","text":"alliteration"},
-      {"label":"D","text":"enjambment"}
+      {
+        "label": "A",
+        "text": "simile"
+      },
+      {
+        "label": "B",
+        "text": "metonymy"
+      },
+      {
+        "label": "C",
+        "text": "alliteration"
+      },
+      {
+        "label": "D",
+        "text": "enjambment"
+      }
     ],
     "answer": "B",
     "explanation": "Pen stands for writing or ideas, while sword stands for force or war. This is metonymy: using something closely related to stand for the thing meant."
@@ -3494,10 +2945,22 @@ const QUESTION_BANK = [
     "topic": "Poetry",
     "question": "“All hands on deck” is an example of ______.",
     "options": [
-      {"label":"A","text":"synecdoche"},
-      {"label":"B","text":"paradox"},
-      {"label":"C","text":"simile"},
-      {"label":"D","text":"free verse"}
+      {
+        "label": "A",
+        "text": "synecdoche"
+      },
+      {
+        "label": "B",
+        "text": "paradox"
+      },
+      {
+        "label": "C",
+        "text": "simile"
+      },
+      {
+        "label": "D",
+        "text": "free verse"
+      }
     ],
     "answer": "A",
     "explanation": "Hands, a part of the body, stands for sailors or workers as a whole. This is synecdoche."
@@ -3509,10 +2972,22 @@ const QUESTION_BANK = [
     "topic": "Poetry",
     "question": "Which sentence is a simile?",
     "options": [
-      {"label":"A","text":"Time is a thief."},
-      {"label":"B","text":"Her smile is like the sun."},
-      {"label":"C","text":"The White House issued a statement."},
-      {"label":"D","text":"Less is more."}
+      {
+        "label": "A",
+        "text": "Time is a thief."
+      },
+      {
+        "label": "B",
+        "text": "Her smile is like the sun."
+      },
+      {
+        "label": "C",
+        "text": "The White House issued a statement."
+      },
+      {
+        "label": "D",
+        "text": "Less is more."
+      }
     ],
     "answer": "B",
     "explanation": "A simile compares two things using like or as."
@@ -3524,10 +2999,22 @@ const QUESTION_BANK = [
     "topic": "Poetry",
     "question": "“Bittersweet” is an example of ______.",
     "options": [
-      {"label":"A","text":"oxymoron"},
-      {"label":"B","text":"rhyme scheme"},
-      {"label":"C","text":"end-stopped line"},
-      {"label":"D","text":"blank verse"}
+      {
+        "label": "A",
+        "text": "oxymoron"
+      },
+      {
+        "label": "B",
+        "text": "rhyme scheme"
+      },
+      {
+        "label": "C",
+        "text": "end-stopped line"
+      },
+      {
+        "label": "D",
+        "text": "blank verse"
+      }
     ],
     "answer": "A",
     "explanation": "Oxymoron places two contradictory words together to create a new meaning."
@@ -3550,6 +3037,5 @@ const QUESTION_BANK = [
     "answer": "A",
     "explanation": "For example, “The wind whispered” gives a human action to the wind."
   }
-
 ];
 if (typeof window !== "undefined") window.QUESTION_BANK = QUESTION_BANK;
